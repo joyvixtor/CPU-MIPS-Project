@@ -52,5 +52,41 @@ module cpu(
     wire SignExtndCtrl;
 
 
+    // data wires
+    wire [31:0] outMemory;
+    wire [31:0] outSCtrl;
+    wire [31:0] outMuxIorD;
+    wire [5:0] instruction31_26;
+    wire [4:0] instruction25_21;
+    wire [4:0] instruction20_16;
+    wire [15:0] instruction15_0;
+
+
+    // COMPONENTES
+    // Memoria Memory
+    Memoria Memory(
+        //inputs
+        clk,
+        outMuxIorD,
+        outSCtrl,
+        //output
+        outMemory
+        //signals
+        MemRead,
+        MemWrite
+    );
+
+    // Instruction Register 
+    Instruc_Reg InstructionRegister(
+        clk,
+        reset,
+        IRWrite,
+        outMemory,
+        instruction31_26,
+        instruction25_21,
+        instruction20_16,
+        instruction15_0
+    )
+
 
 endmodule
