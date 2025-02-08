@@ -56,37 +56,60 @@ module cpu(
     wire [31:0] outMemory;
     wire [31:0] outSCtrl;
     wire [31:0] outMuxIorD;
+
     wire [5:0] instruction31_26;
     wire [4:0] instruction25_21;
     wire [4:0] instruction20_16;
     wire [15:0] instruction15_0;
+    
+    wire [31:0] outMuxRegDst;
+    wire [31:0] outMuxWriteData;
+    wire [31:0] outDataA;
+    wire [31:0] outDataB;
 
 
     // COMPONENTES
     // Memoria Memory
     Memoria Memory(
-        //inputs
+        //signals
         clk,
+        MemRead,
+        MemWrite,
+        //inputs
         outMuxIorD,
         outSCtrl,
         //output
         outMemory
-        //signals
-        MemRead,
-        MemWrite
     );
 
     // Instruction Register 
     Instruc_Reg InstructionRegister(
+        //signals
         clk,
         reset,
         IRWrite,
+        //inputs
         outMemory,
+        //outputs
         instruction31_26,
         instruction25_21,
         instruction20_16,
         instruction15_0
-    )
+    );
 
+    Banco_Reg Registers(
+        //signals
+        clk,
+        reset,
+        RegWrite,
+        //inputs
+        instruction25_21,
+        instruction20_16,
+        outMuxRegDst,
+        outMuxWriteData,
+        //outputs
+        outDataA,
+        outDataB
+    );
 
 endmodule
