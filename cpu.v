@@ -30,6 +30,9 @@ module cpu(
     wire AuxMultDivA;
     wire AuxMultDivB;
 
+    wire multOP;
+    wire divOP;
+
     // memory signals
     wire MemRead;
     wire MemWrite;
@@ -88,8 +91,8 @@ module cpu(
 
     wire [31:0] outSAux;
 
-    wire [31:0] outMultDivA;
-    wire [31:0] outMultDivB;
+    wire [31:0] outAuxMultDivA;
+    wire [31:0] outAuxMultDivB;
 
     wire [31:0] outPC;
     wire [31:0] outMuxPCWrite;
@@ -101,6 +104,17 @@ module cpu(
 
     wire outALULT;
     wire [31:0] outEx1to32;
+
+    wire [31:0] outMuxAuxMultDivA;
+    wire [31:0] outMuxAuxMultDivB;
+
+    wire [31:0] multHighHalf;
+    wire [31:0] multLowHalf;
+    wire [31:0] divRemainder;
+    wire [31:0] divQuotient;
+
+    wire [31:0] outMult;
+    wire [31:0] outDiv;
 
     // COMPONENTES
     // Memoria Memory
@@ -147,7 +161,33 @@ module cpu(
         outDataB
     );
 
-    //Multiplexadores
+    //Unidade de Mult
+    multUnit mult(
+        //signals
+        clk,
+        reset,
+        multOP,
+        //inputs
+        outAuxMultDivA,
+        outAuxMultDivB,
+        //outputs
+        outMult,
+    )
+
+    //Unidade de Div
+    divUnit div(
+        //signals
+        clk,
+        reset,
+        divOP,
+        //inputs
+        outAuxMultDivA,
+        outAuxMultDivB,
+        //outputs
+        outDiv,
+    )
+
+    //MULTIPLEXADORES
     mux_IorD muxIorD(
         //signals
         IorD,
@@ -184,7 +224,47 @@ module cpu(
         outMuxWriteData,
     );
 
-    //Unidades de Shift e Sign Extend
+    mux_AuxMultDivA auxMuxMultDivA(
+        //signals
+        MemA,
+        //inputs
+        outDataA,
+        outAuxMultDivA,
+        //outputs
+        outMuxAuxMultDivA,
+    );
+
+    mux_AuxMultDivB auxMuxMultDivB(
+        //signals
+        MemB,
+        //inputs
+        outDataB,
+        outAuxMultDivB,
+        //outputs
+        outMuxAuxMultDivB,
+    );
+
+    mux_MultDivA muxMultDivA(
+        //signals
+        MultDiv,
+        //inputs
+        multHighHalf,
+        divRemainder,
+        //outputs
+        outMultDivA,
+    );
+
+    mux_MultDivB muxMultDivB(
+        //signals
+        MultDiv,
+        //inputs
+        multLowHalf,
+        divQuotient,
+        //outputs
+        outMultDivB,
+    );
+
+    //UNIDADES DE SHIFT E SIGN EXTEND
     Extend_1to32 ex_1to32(
         //input
         outALULT,
@@ -196,9 +276,9 @@ module cpu(
         //Input
 
         //Output
-    )
+    );
 
-    //Registradores
+    //REGISTRADORES
     assign writePC = (PCWrite || (PCWriteCond && outMuxPCWriteCond)); 
 
     Registrador PC(
@@ -311,7 +391,7 @@ module cpu(
         outSAux,
     );
 
-    Registrador MultDivA(
+    Registrador AuxMultDivA(
         //signals
         clk,
         reset,
@@ -319,10 +399,10 @@ module cpu(
         //inputs
         outMemory,
         //outputs
-        outMultDivA,
+        outAuxMultDivA,
     );
 
-    Registrador MultDivB(
+    Registrador AuxMultDivB(
         //signals
         clk,
         reset,
@@ -330,7 +410,7 @@ module cpu(
         //inputs
         outMemory,
         //outputs
-        outMultDivB,
+        outAuxMultDivB,
     );
 
 endmodule
