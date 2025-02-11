@@ -343,6 +343,18 @@ module cpu(
         outMuxAluB
     );
 
+    mux_PCSource muxPCSrc(
+        //signals
+        PCSrc,
+        //inputs
+        outALUResult,
+        outShiftLeft_2_26to28,
+        outALUOut,
+        outEPC,
+        //outputs
+        outPCSrc
+    );
+
     //UNIDADES DE SHIFT E SIGN EXTEND
     Extend_1to32 ex_1to32(
         //input
