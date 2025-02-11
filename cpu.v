@@ -116,6 +116,10 @@ module cpu(
     wire [31:0] outMult;
     wire [31:0] outDiv;
 
+    wire [31:0] outMuxShiftIn;
+    wire [31:0] outMuxShiftS;
+    wire [31:0] outSignExtnd_8to32_16to32;
+
     // COMPONENTES
     // Memoria Memory
     Memoria Memory(
@@ -185,6 +189,19 @@ module cpu(
         outAuxMultDivB,
         //outputs
         outDiv,
+    );
+
+    //Unidade de Shifting
+    ShiftingUnit shiftUnit(
+        //signals
+        clk,
+        reset,
+        ShiftCtrl,
+        //inputs
+        outMuxShiftIn,
+        outMuxShiftS,
+        //outputs
+        outShiftingUnit,
     );
 
     //MULTIPLEXADORES
@@ -262,6 +279,25 @@ module cpu(
         divQuotient,
         //outputs
         outMultDivB,
+    );
+
+    mux_ShiftIn muxShiftIn(
+        //signals
+        ShiftIn,
+        //inputs
+        outDataB,
+        outSignExtnd_8to32_16to32,
+        //outputs
+        outMuxShiftIn,
+    );
+
+    mux_ShiftS muxShiftS(
+        //signals
+        ShiftS,
+        //inputs
+        instruction15_0,
+        //outputs
+        outMuxShiftS,
     );
 
     //UNIDADES DE SHIFT E SIGN EXTEND
