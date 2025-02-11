@@ -363,10 +363,30 @@ module cpu(
         outEx1to32
     );
 
+    Extend_16to32_8to32 ex16to32_8to32(
+        //signals
+        SignExtndCtrl,
+        //input
+        instruction15_0,
+        outMDR,
+        //output
+        outSignExtnd_8to32_16to32
+    );
+
     Shift_Left2 SL2(
         //Input
-
+        outSignExtnd_8to32_16to32,
         //Output
+        outShiftLeft_2
+    );
+
+    Shift_Left2_26to28 SL226to28(
+        //input
+        instruction25_21,
+        instruction20_16,
+        instruction15_0,
+        //output
+        outShiftLeft_2_26to28
     );
 
     //REGISTRADORES
