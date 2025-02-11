@@ -539,4 +539,44 @@ module cpu(
         outAuxMultDivB
     );
 
+    //UNIDADE DE CONTROLE
+    ControlUnit controlUnit(
+        //inputs
+        clk,
+        reset,
+        outALUOverflow,
+        outALUZero,
+        ALUOP,
+        instruction31_26[5:0],
+        //outputs
+        PCWriteCondSource,
+        ExCause,
+        IorD,
+        AuxMultDivA,
+        AuxMultDivB,
+        PCWriteCond,
+        PCWrite,
+        MemWrite,
+        MemRead,
+        MemA,
+        MemB,
+        IRWrite,
+        RegWrite,
+        WriteData,
+        RegDst,
+        SCtrl,
+        LCtrl,
+        MDRCtrl,
+        PCSrc,
+        ShiftCtrl,
+        ShiftIn,
+        ShiftS,
+        EPCWrite,
+        ALUSrcA,
+        ALUSrcB,
+        MultDiv,
+        SignExtndCtrl
+    );
+
+
 endmodule
