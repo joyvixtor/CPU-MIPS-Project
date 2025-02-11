@@ -126,6 +126,11 @@ module cpu(
     wire outALUOverflow;
     wire outALUzero;
 
+    wire [31:0] outShiftLeft_2;
+    wire [31:0] outShiftLeft_2_26to28;
+    wire [31:0] outMuxPCWriteCondSource;
+    wire [31:0] outPCSrc;
+
     // COMPONENTES
     //ALU
     ALU alu(
@@ -353,6 +358,16 @@ module cpu(
         outEPC,
         //outputs
         outPCSrc
+    );
+
+    mux_PC_Write_Cond_Source muxPCWCSrc(
+        //signals
+        PCWriteCondSource
+        //inputs
+        outALUZero,
+        outALUEQ,
+        //outputs
+        outMuxPCWriteCondSource
     );
 
     //UNIDADES DE SHIFT E SIGN EXTEND
