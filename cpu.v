@@ -172,7 +172,7 @@ module cpu(
         outAuxMultDivB,
         //outputs
         outMult,
-    )
+    );
 
     //Unidade de Div
     divUnit div(
@@ -185,7 +185,7 @@ module cpu(
         outAuxMultDivB,
         //outputs
         outDiv,
-    )
+    );
 
     //MULTIPLEXADORES
     mux_IorD muxIorD(
