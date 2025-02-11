@@ -120,7 +120,29 @@ module cpu(
     wire [31:0] outMuxShiftS;
     wire [31:0] outSignExtnd_8to32_16to32;
 
+    wire [31:0] outMuxAluA;
+    wire [31:0] outMuxAluB;
+    wire outALUEQ;
+    wire outALUOverflow;
+    wire outALUzero;
+
     // COMPONENTES
+    //ALU
+    ALU alu(
+        //signals
+        ALUOP,
+        //inputs
+        outMuxAluA,
+        outMuxAluB,
+        //outputs
+        outALUResult,
+        outALULT,
+        outALUEQ,
+        outALUOverflow,
+        outALUZero
+    );
+
+
     // Memoria Memory
     Memoria Memory(
         //signals
@@ -188,7 +210,7 @@ module cpu(
         outAuxMultDivA,
         outAuxMultDivB,
         //outputs
-        outDiv,
+        outDiv
     );
 
     //Unidade de Shifting
@@ -201,7 +223,7 @@ module cpu(
         outMuxShiftIn,
         outMuxShiftS,
         //outputs
-        outShiftingUnit,
+        outShiftingUnit
     );
 
     //MULTIPLEXADORES
@@ -214,7 +236,7 @@ module cpu(
         outALUResult,
         outMuxExCause,
         //outputs
-        outMuxIorD,
+        outMuxIorD
     );
 
     mux_RegDst muxRegDst(
@@ -224,7 +246,7 @@ module cpu(
         instruction20_16,
         instruction15_0,
         //outputs
-        outMuxRegDst,
+        outMuxRegDst
     );
 
     mux_WriteData muxWriteData(
@@ -238,7 +260,7 @@ module cpu(
         outLOW,
         outShiftingUnit
         //outputs
-        outMuxWriteData,
+        outMuxWriteData
     );
 
     mux_AuxMultDivA auxMuxMultDivA(
@@ -248,7 +270,7 @@ module cpu(
         outDataA,
         outAuxMultDivA,
         //outputs
-        outMuxAuxMultDivA,
+        outMuxAuxMultDivA
     );
 
     mux_AuxMultDivB auxMuxMultDivB(
@@ -258,7 +280,7 @@ module cpu(
         outDataB,
         outAuxMultDivB,
         //outputs
-        outMuxAuxMultDivB,
+        outMuxAuxMultDivB
     );
 
     mux_MultDivA muxMultDivA(
@@ -268,7 +290,7 @@ module cpu(
         multHighHalf,
         divRemainder,
         //outputs
-        outMultDivA,
+        outMultDivA
     );
 
     mux_MultDivB muxMultDivB(
@@ -278,7 +300,7 @@ module cpu(
         multLowHalf,
         divQuotient,
         //outputs
-        outMultDivB,
+        outMultDivB
     );
 
     mux_ShiftIn muxShiftIn(
@@ -288,7 +310,7 @@ module cpu(
         outDataB,
         outSignExtnd_8to32_16to32,
         //outputs
-        outMuxShiftIn,
+        outMuxShiftIn
     );
 
     mux_ShiftS muxShiftS(
@@ -297,7 +319,28 @@ module cpu(
         //inputs
         instruction15_0,
         //outputs
-        outMuxShiftS,
+        outMuxShiftS
+    );
+
+    mux_ALUA muxAluA(
+        //signals
+        ALUSrcA,
+        //inputs
+        outPC,
+        outA,
+        //output
+        outMuxAluA
+    );
+
+    mux_ALUB muxAluB(
+        //signals
+        ALUSrcB,
+        //inputs
+        outB,
+        outSignExtnd_8to32_16to32,
+        outShiftLeft_2,
+        //output
+        outMuxAluB
     );
 
     //UNIDADES DE SHIFT E SIGN EXTEND
@@ -305,7 +348,7 @@ module cpu(
         //input
         outALULT,
         //output
-        outEx1to32,
+        outEx1to32
     );
 
     Shift_Left2 SL2(
@@ -325,7 +368,7 @@ module cpu(
         //inputs
         outMuxPCWrite,
         //outputs
-        outPC,
+        outPC
     );
 
     Registrador A(
@@ -380,7 +423,7 @@ module cpu(
         //inputs
         outMultDivA,
         //outputs
-        outHI,
+        outHI
     );
 
     Registrador LOW(
@@ -391,7 +434,7 @@ module cpu(
         //inputs
         outMultDivB,
         //outputs
-        outLOW,
+        outLOW
     ;)
 
     Registrador MDR(
@@ -402,7 +445,7 @@ module cpu(
         //inputs
         outMemory,
         //outputs
-        outMDR,
+        outMDR
     );
 
     Registrador LAux(
@@ -413,7 +456,7 @@ module cpu(
         //inputs
         outMDR,
         //outputs
-        outLAux,
+        outLAux
     );
 
     Registrador SAux(
@@ -424,7 +467,7 @@ module cpu(
         //inputs
         outMDR,
         //outputs
-        outSAux,
+        outSAux
     );
 
     Registrador AuxMultDivA(
@@ -435,7 +478,7 @@ module cpu(
         //inputs
         outMemory,
         //outputs
-        outAuxMultDivA,
+        outAuxMultDivA
     );
 
     Registrador AuxMultDivB(
@@ -446,7 +489,7 @@ module cpu(
         //inputs
         outMemory,
         //outputs
-        outAuxMultDivB,
+        outAuxMultDivB
     );
 
 endmodule
