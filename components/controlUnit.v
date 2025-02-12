@@ -30,6 +30,7 @@ module controlUnit(
     output reg [1:0] ALUSrcB,
 
     //Registradores
+    //COR VERMELHA
     output reg PCWriteCond,
     output reg PCWrite,
     output reg MDRCtrl,
@@ -39,15 +40,17 @@ module controlUnit(
     output reg HiLow,
     output reg AuxMultDivA,
     output reg AuxMultDivB,
+    output reg [1:0] SCtrl,
+    output reg [1:0] LCtrl
 
+    // COR VERDE NO DIAGRAMA
     output reg MemWrite,
     output reg MemRead,
     output reg IRWrite,
     output reg RegWrite,
 
+    //SIGN EXTND ESPECIAL
     output reg SignExtndCtrl,
-    output reg [1:0] SCtrl,
-    output reg [1:0] LCtrl
 );
 
     reg [5:0] STATE;
@@ -105,3 +108,8 @@ module controlUnit(
     end
 
 endmodule
+
+// TO  DO:
+// VERIFICAR SE OS SINAIS JÁ ESTÃO CORRETOS
+// 1. Implementar os estados
+// 2. Implementar as operações
