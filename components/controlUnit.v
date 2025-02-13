@@ -57,13 +57,44 @@ module controlUnit(
     integer COUNTER;
 
     //STATES
-    parameter ST_ADD = 6'b000000, //0
-    parameter ST_ADDI = 6'b000001, //1
-    parameter ST_COMMON = 6'b100010; //34
+    //FORMATO R
+    parameter ST_ADD = 6'b000000; //0
+    parameter ST_AND = 6'b000001; //1
+    parameter ST_DIV = 6'b000010; //2
+    parameter ST_MULT = 6'b000011; //3
+    parameter ST_JR = 6'b000100; //4
+    parameter ST_MFHI = 6'b000101; //5
+    parameter ST_MFLO = 6'b000110; //6
+    parameter ST_SLL = 6'b000111; //7
+    parameter ST_SLT = 6'b001000; //8
+    parameter ST_SRA = 6'b001001; //9
+    parameter ST_SUB = 6'b001010; //10
+    parameter ST_DIVM = 6'b001011; //11
 
-    //FUNCTS
-    parameter ADD = 6'h20;
-    parameter AND = 6'h24;
+    //FORMATO I
+    parameter ST_ADDI = 6'b001100; //12
+    parameter ST_LW = 6'b001101; //13
+    parameter ST_SB = 6'b001110; //14
+    parameter ST_SW = 6'b001111; //15
+    parameter ST_LB = 6'b010000; //16
+    parameter ST_BEQ = 6'b010001; //17
+    parameter ST_ADDM = 6'b010010; //18
+    parameter ST_LUI = 6'b010011; //19
+    parameter ST_BNE = 6'b010100; //20
+
+    //FORMATO J
+    parameter ST_J = 6'b010101; //21
+    parameter ST_JAL = 6'b010110; //22
+
+    //INICIAIS E EXCECOES
+    parameter ST_COMMON = 6'b010111; //23
+    parameter ST_OVERFLOW = 6'b011000; //24
+    parameter ST_DIVBYZERO = 6'b011001; //25
+    parameter ST_OPCODEINVALID = 6'b011010; //26
+
+    //OPCODES
+    //FORMATO R
+    
 
 
 
