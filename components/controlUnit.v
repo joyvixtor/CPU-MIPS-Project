@@ -92,9 +92,35 @@ module controlUnit(
     parameter ST_DIVBYZERO = 6'b011001; //25
     parameter ST_OPCODEINVALID = 6'b011010; //26
 
-    //OPCODES
+    //FUNCTS
     //FORMATO R
-    
+    parameter ADD = 6'h20;
+    parameter AND = 6'h24;
+    parameter DIV = 6'h1A;
+    parameter MULT = 6'h18;
+    parameter JR = 6'h08
+    parameter MFHI = 6'h10;
+    parameter MFLO = 6'h12;
+    parameter SLL = 6'h00;
+    parameter SLT = 6'h2A;
+    parameter SRA = 6'h03;
+    parameter SUB = 6'h22;
+    parameter DIVM = 6'h05;
+
+    //FORMATO I
+    parameter ADDI = 6'h08;
+    parameter BEQ = 6'h04;
+    parameter BNE = 6'h05;
+    parameter ADDM = 6'h01;
+    parameter LB = 6'h20;
+    parameter LUI = 6'h0F;
+    parameter LW = 6'h23;
+    parameter SB = 6'h28;
+    parameter SW = 6'h2B;
+
+    //FORMATO J
+    parameter J = 6'h02;
+    parameter JAL = 6'h03;
 
 
 
