@@ -7,11 +7,11 @@ module sgnExtnd1_32(
 
     wire [31:0] out_mdr, out_instruction
 
-    assign out_mdr =  (Data_in[15]) ? {{16{1'b1}}, Data_in} : {{16{1'b0}}, Data_in};;
+    assign out_instruction =  (Data_in[15]) ? {{16{1'b1}}, Data_in} : {{16{1'b0}}, Data_in};;
 
-    assign out_instruction = {24'b0, data_instruction};
+    assign out_mdr = {24'b0, data_instruction};
 
-    assign out = (selector == 1'b0) ? out_mdr : out_instruction;
+    assign out = (selector == 1'b0) ? out_instruction : out_mdr;
 
 
 endmodule
