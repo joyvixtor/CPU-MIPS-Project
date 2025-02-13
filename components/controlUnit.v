@@ -13,8 +13,8 @@ module controlUnit(
     output reg divOP,
     output reg multOP,
     output reg [2:0] ALUOP,
-    output reg [2:0] ShiftOP,
-    output reg [2:0] ShiftCtrl,
+    output reg [2:0] shiftOP,
+    output reg [2:0] shiftCtrl,
 
     //Muxes
     output reg [2:0] WriteData,
@@ -69,22 +69,47 @@ module controlUnit(
 
     always @(posedge clk) begin
         if (reset) begin
+            //SINAIS OPERACOES
+            divOP = 1'b0;
+            multOP = 1'b0;
+            shiftOP = 3'b000;
+            shiftCtrl = 3'b000;
+            ALUOP = 3'b000;
+
+            //MUXES
+            WriteData = 3'b110;
+            muxShiftS = 2'b00;
+            muxShiftIn = 2'b00;
+            RegDst = 2'b10;
+            muxPCWriteCondSource = 1'b0;
+            PCSrc = 2'b00;
+            MultDiv = 1'b0;
+            IorD = 2'b00;
+            ExCause = 2'b00;
+            ALUSrcA = 2'b00;
+            ALUSrcB = 2'b00;
+
+            COUNTER = 0;
+            STATE = ST_COMMON;
+
             //REGISTRADORES
-            PCWriteCond = 0;
-            PCWrite = 0;
-            MDRCtrl = 0;
-            LoadAB = 0;
-            ALUOut = 0;
-            EPCWrite = 0;
-            HiLow = 0;
-            AuxMultDivA = 0;
-            AuxMultDivB = 0;
-            MemWrite = 0;
-            MemRead = 0;
-            IRWrite = 0;
-            RegWrite = 1;
-            SCtrl = 0;
-            LCtrl = 0;
+            PCWriteCond = 1'b0;
+            PCWrite = 1'b0;
+            MDRCtrl = 1'b0;
+            LoadAB = 1'b0;
+            ALUOut = 1'b0;
+            EPCWrite = 1'b0;
+            HiLow = 1'b0;
+            AuxMultDivA = 1'b0;
+            AuxMultDivB = 1'b0;
+            SCtrl = 2'b00;
+            LCtrl = 2'b00;
+
+            //REGISTRADORES GRANDES (VERDES)
+            MemWrite = 1'b0;
+            MemRead = 1'b0;
+            IRWrite = 1'b0;
+            RegWrite = 1'b1;
         end
 
         else if (overflow && STATE != ST_ADDIU && STATE != ST_AND) begin
