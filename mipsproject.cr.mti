@@ -1,0 +1,189 @@
+/home/joyvixtor/Documentos/CPU-MIPS-Project/components/multUnit.v {1 {vlog -work work -stats=none /home/joyvixtor/Documentos/CPU-MIPS-Project/components/multUnit.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module multUnit
+
+Top level modules:
+	multUnit
+
+} {} {}} /home/joyvixtor/Documentos/CPU-MIPS-Project/components/sign-extend/sgnExtnd8_16_32.v {1 {vlog -work work -stats=none /home/joyvixtor/Documentos/CPU-MIPS-Project/components/sign-extend/sgnExtnd8_16_32.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module sgnExtnd1_32
+
+Top level modules:
+	sgnExtnd1_32
+
+} {} {}} /home/joyvixtor/Documentos/CPU-MIPS-Project/components/shifts/shiftLeft26_28.v {1 {vlog -work work -stats=none /home/joyvixtor/Documentos/CPU-MIPS-Project/components/shifts/shiftLeft26_28.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module shiftLet26_28
+
+Top level modules:
+	shiftLet26_28
+
+} {} {}} /home/joyvixtor/Documentos/CPU-MIPS-Project/components/multiplex/muxMultDiv.v {1 {vlog -work work -stats=none /home/joyvixtor/Documentos/CPU-MIPS-Project/components/multiplex/muxMultDiv.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module muxMultDiv
+
+Top level modules:
+	muxMultDiv
+
+} {} {}} /home/joyvixtor/Documentos/CPU-MIPS-Project/components/multiplex/muxWriteData.v {1 {vlog -work work -stats=none /home/joyvixtor/Documentos/CPU-MIPS-Project/components/multiplex/muxWriteData.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module muxWriteData
+
+Top level modules:
+	muxWriteData
+
+} {} {}} /home/joyvixtor/Documentos/CPU-MIPS-Project/components/divUnit.v {1 {vlog -work work -stats=none /home/joyvixtor/Documentos/CPU-MIPS-Project/components/divUnit.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module divUnit
+
+Top level modules:
+	divUnit
+
+} {} {}} /home/joyvixtor/Documentos/CPU-MIPS-Project/components/shifts/shiftLeft2.v {1 {vlog -work work -stats=none /home/joyvixtor/Documentos/CPU-MIPS-Project/components/shifts/shiftLeft2.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module shiftLet2
+
+Top level modules:
+	shiftLet2
+
+} {} {}} /home/joyvixtor/Documentos/CPU-MIPS-Project/components/sign-extend/sgnExtnd1_32.v {1 {vlog -work work -stats=none /home/joyvixtor/Documentos/CPU-MIPS-Project/components/sign-extend/sgnExtnd1_32.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module sgnExtnd1_32
+
+Top level modules:
+	sgnExtnd1_32
+
+} {} {}} /home/joyvixtor/Documentos/CPU-MIPS-Project/components/multiplex/muxShiftS.v {1 {vlog -work work -stats=none /home/joyvixtor/Documentos/CPU-MIPS-Project/components/multiplex/muxShiftS.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module muxShiftS
+
+Top level modules:
+	muxShiftS
+
+} {} {}} /home/joyvixtor/Documentos/CPU-MIPS-Project/components/shifts/shiftLeft16.v {1 {vlog -work work -stats=none /home/joyvixtor/Documentos/CPU-MIPS-Project/components/shifts/shiftLeft16.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module shiftLet16
+
+Top level modules:
+	shiftLet16
+
+} {} {}} /home/joyvixtor/Documentos/CPU-MIPS-Project/components/parts-given/Instr_Reg.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/joyvixtor/Documentos/CPU-MIPS-Project/components/parts-given/Instr_Reg.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity Instr_Reg
+-- Compiling architecture behavioral_arch of Instr_Reg
+
+} {} {}} /home/joyvixtor/Documentos/CPU-MIPS-Project/components/multiplex/muxALUSrcA.v {1 {vlog -work work -stats=none /home/joyvixtor/Documentos/CPU-MIPS-Project/components/multiplex/muxALUSrcA.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module muxALUSrcA
+
+Top level modules:
+	muxALUSrcA
+
+} {} {}} /home/joyvixtor/Documentos/CPU-MIPS-Project/components/multiplex/muxPCWriteCondSource.v {1 {vlog -work work -stats=none /home/joyvixtor/Documentos/CPU-MIPS-Project/components/multiplex/muxPCWriteCondSource.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module muxShiftIn
+
+Top level modules:
+	muxShiftIn
+
+} {} {}} /home/joyvixtor/Documentos/CPU-MIPS-Project/components/multiplex/muxALUSrcB.v {1 {vlog -work work -stats=none /home/joyvixtor/Documentos/CPU-MIPS-Project/components/multiplex/muxALUSrcB.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module muxALUSrcA
+
+Top level modules:
+	muxALUSrcA
+
+} {} {}} /home/joyvixtor/Documentos/CPU-MIPS-Project/components/parts-given/ula32.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/joyvixtor/Documentos/CPU-MIPS-Project/components/parts-given/ula32.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Ula32
+-- Compiling architecture behavioral of Ula32
+
+} {} {}} /home/joyvixtor/Documentos/CPU-MIPS-Project/components/multiplex/muxShiftIn.v {1 {vlog -work work -stats=none /home/joyvixtor/Documentos/CPU-MIPS-Project/components/multiplex/muxShiftIn.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module muxShiftIn
+
+Top level modules:
+	muxShiftIn
+
+} {} {}} /home/joyvixtor/Documentos/CPU-MIPS-Project/cpu.v {1 {vlog -work work -stats=none /home/joyvixtor/Documentos/CPU-MIPS-Project/cpu.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module cpu
+
+Top level modules:
+	cpu
+
+} {} {}} /home/joyvixtor/Documentos/CPU-MIPS-Project/components/parts-given/RegDesloc.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/joyvixtor/Documentos/CPU-MIPS-Project/components/parts-given/RegDesloc.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity RegDesloc
+-- Compiling architecture behavioral_arch of RegDesloc
+
+} {} {}} /home/joyvixtor/Documentos/CPU-MIPS-Project/components/parts-given/Banco_reg.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/joyvixtor/Documentos/CPU-MIPS-Project/components/parts-given/Banco_reg.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Banco_reg
+-- Compiling architecture behavioral_arch of Banco_reg
+
+} {} {}} /home/joyvixtor/Documentos/CPU-MIPS-Project/components/multiplex/muxExCause.v {1 {vlog -work work -stats=none /home/joyvixtor/Documentos/CPU-MIPS-Project/components/multiplex/muxExCause.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module muxExCause
+
+Top level modules:
+	muxExCause
+
+} {} {}} /home/joyvixtor/Documentos/CPU-MIPS-Project/components/multiplex/muxIorD.v {1 {vlog -work work -stats=none /home/joyvixtor/Documentos/CPU-MIPS-Project/components/multiplex/muxIorD.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module muxIorD
+
+Top level modules:
+	muxIorD
+
+} {} {}} /home/joyvixtor/Documentos/CPU-MIPS-Project/components/parts-given/Memoria.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/joyvixtor/Documentos/CPU-MIPS-Project/components/parts-given/Memoria.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Compiling package ram_constants
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package LPM_COMPONENTS
+-- Loading package ram_constants
+-- Compiling entity Memoria
+-- Compiling architecture behavioral_arch of Memoria
+
+} {} {}} /home/joyvixtor/Documentos/CPU-MIPS-Project/components/multiplex/muxRegDst.v {1 {vlog -work work -stats=none /home/joyvixtor/Documentos/CPU-MIPS-Project/components/multiplex/muxRegDst.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module muxRegDst
+
+Top level modules:
+	muxRegDst
+
+} {} {}} /home/joyvixtor/Documentos/CPU-MIPS-Project/components/multiplex/muxPCSrc.v {1 {vlog -work work -stats=none /home/joyvixtor/Documentos/CPU-MIPS-Project/components/multiplex/muxPCSrc.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module muxPCSrc
+
+Top level modules:
+	muxPCSrc
+
+} {} {}} /home/joyvixtor/Documentos/CPU-MIPS-Project/components/parts-given/Registrador.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/joyvixtor/Documentos/CPU-MIPS-Project/components/parts-given/Registrador.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity Registrador
+-- Compiling architecture behavioral_arch of Registrador
+
+} {} {}}
