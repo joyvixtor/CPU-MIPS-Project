@@ -263,7 +263,7 @@ module cpu(
         outLAux,
         outHI,
         outLOW,
-        outShiftingUnit
+        outShiftingUnit,
         //outputs
         outMuxWriteData
     );
@@ -362,7 +362,7 @@ module cpu(
 
     mux_PC_Write_Cond_Source muxPCWCSrc(
         //signals
-        PCWriteCondSource
+        PCWriteCondSource,
         //inputs
         outALUZero,
         outALUEQ,
@@ -451,7 +451,7 @@ module cpu(
         outEPC
     );
 
-    Registrador ALUOut(
+    Registrador RegALUOut(
         //signals
         clk,
         reset,
@@ -482,7 +482,7 @@ module cpu(
         outMultDivB,
         //outputs
         outLOW
-    ;)
+    );
 
     Registrador MDR(
         //signals
@@ -517,7 +517,7 @@ module cpu(
         outSAux
     );
 
-    Registrador AuxMultDivA(
+    Registrador RegAuxMultDivA(
         //signals
         clk,
         reset,
@@ -528,7 +528,7 @@ module cpu(
         outAuxMultDivA
     );
 
-    Registrador AuxMultDivB(
+    Registrador RegAuxMultDivB(
         //signals
         clk,
         reset,

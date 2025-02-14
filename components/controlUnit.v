@@ -3,7 +3,7 @@ module controlUnit(
     input wire reset,
 
     input wire overflow,
-    input wire zero,
+    input wire divByZero,
 
     //Instructions
     input wire [5:0] opcode,
@@ -43,7 +43,7 @@ module controlUnit(
     output reg AuxMultDivA,
     output reg AuxMultDivB,
     output reg [1:0] SCtrl,
-    output reg [1:0] LCtrl
+    output reg [1:0] LCtrl,
 
     // COR VERDE NO DIAGRAMA
     output reg MemWrite,
@@ -52,7 +52,7 @@ module controlUnit(
     output reg RegWrite,
 
     //SIGN EXTND ESPECIAL
-    output reg SignExtndCtrl,
+    output reg SignExtndCtrl
 );
 
     reg [5:0] STATE;
@@ -95,12 +95,13 @@ module controlUnit(
     parameter ST_OPCODEINVALID = 6'b011010; //26
 
     //FUNCTS
+    parameter R = 6'b000000;
     //FORMATO R
     parameter ADD = 6'h20;
     parameter AND = 6'h24;
     parameter DIV = 6'h1A;
     parameter MULT = 6'h18;
-    parameter JR = 6'h08
+    parameter JR = 6'h08;
     parameter MFHI = 6'h10;
     parameter MFLO = 6'h12;
     parameter SLL = 6'h00;
@@ -175,7 +176,7 @@ module controlUnit(
             SignExtndCtrl = 1'b0;
         end
 
-        else if (overflow && STATE != ST_ADDIU && STATE != ST_AND) begin
+        else if (overflow && STATE != ST_AND) begin
             divOP = 1'b0;
             multOP = 1'b0;
             shiftOP = 3'b000;
@@ -443,7 +444,7 @@ module controlUnit(
 
                 //FORMATO R
                 ST_ADD : begin
-                    if (COUTER == 0) begin
+                    if (COUNTER == 0) begin
                         divOP = 1'b0;
                         multOP = 1'b0;
                         shiftOP = 3'b000;

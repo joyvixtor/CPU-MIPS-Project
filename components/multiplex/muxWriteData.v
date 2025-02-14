@@ -1,6 +1,6 @@
 module muxWriteData (
     input wire [2:0] selector,
-    input wire [4:0] data_0, data_1, data_2, data_3, data 4, data_5,
+    input wire [4:0] data_0, data_1, data_2, data_3, data_4, data_5,
     output reg [4:0] out
 );
 

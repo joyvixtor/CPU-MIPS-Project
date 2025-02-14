@@ -1,6 +1,6 @@
 module muxPCSrc(
     input wire [1:0] selector,
-    input wire [31:0] data_0, data_1, data_2, data_3
+    input wire [31:0] data_0, data_1, data_2, data_3,
     output reg [31:0] out
 );
 
