@@ -441,6 +441,7 @@ module controlUnit(
                     end
                 end
 
+                //FORMATO R
                 ST_ADD : begin
                     if (COUTER == 0) begin
                         divOP = 1'b0;
@@ -525,6 +526,138 @@ module controlUnit(
                         MemRead = 1'b0;
                         IRWrite = 1'b0;
                         RegWrite = 1'b1;
+
+                        SignExtndCtrl = 1'b0;
+                    end
+                    else if(COUNTER == 2) begin
+                        divOP = 1'b0;
+                        multOP = 1'b0;
+                        shiftOP = 3'b000;
+                        shiftCtrl = 3'b000;
+                        ALUOP = 3'b000;
+
+                        WriteData = 3'b000;
+                        muxShiftS = 2'b00;
+                        muxShiftIn = 2'b00;
+                        RegDst = 2'b00;
+                        muxPCWriteCondSource = 1'b0;
+                        PCSrc = 2'b00;
+                        MultDiv = 1'b0;
+                        IorD = 2'b00;
+                        ExCause = 2'b00;
+                        ALUSrcA = 2'b00;
+                        ALUSrcB = 2'b00;
+                        MemA = 1'b0;
+                        MemB = 1'b0;
+
+                        COUNTER = 0;
+                        STATE = ST_OVERFLOW;
+
+                        PCWriteCond = 1'b0;
+                        PCWrite = 1'b0;
+                        MDRCtrl = 1'b0;
+                        LoadAB = 1'b0;
+                        ALUOut = 1'b0;
+                        EPCWrite = 1'b0;
+                        HiLow = 1'b0;
+                        AuxMultDivA = 1'b0;
+                        AuxMultDivB = 1'b0;
+                        SCtrl = 2'b00;
+                        LCtrl = 2'b00;
+
+                        MemWrite = 1'b0;
+                        MemRead = 1'b0;
+                        IRWrite = 1'b0;
+                        RegWrite = 1'b0;
+
+                        SignExtndCtrl = 1'b0;
+                    end
+                end
+
+                ST_AND : begin
+                    if(COUNTER == 0) begin
+                        divOP = 1'b0;
+                        multOP = 1'b0;
+                        shiftOP = 3'b000;
+                        shiftCtrl = 3'b000;
+                        ALUOP = 3'b001; //
+
+                        WriteData = 3'b000;
+                        muxShiftS = 2'b00;
+                        muxShiftIn = 2'b00;
+                        RegDst = 2'b00;
+                        muxPCWriteCondSource = 1'b0;
+                        PCSrc = 2'b00;
+                        MultDiv = 1'b0;
+                        IorD = 2'b00; //
+                        ExCause = 2'b00;
+                        ALUSrcA = 2'b01; //
+                        ALUSrcB = 2'b00; //
+                        MemA = 1'b0;
+                        MemB = 1'b0;
+
+                        COUNTER = COUNTER + 1;
+                        STATE = ST_AND;
+
+                        PCWriteCond = 1'b0;
+                        PCWrite = 1'b0;
+                        MDRCtrl = 1'b0;
+                        LoadAB = 1'b0;
+                        ALUOut = 1'b1; //
+                        EPCWrite = 1'b0;
+                        HiLow = 1'b0;
+                        AuxMultDivA = 1'b0;
+                        AuxMultDivB = 1'b0;
+                        SCtrl = 2'b00;
+                        LCtrl = 2'b00;
+
+                        MemWrite = 1'b0;
+                        MemRead = 1'b0;
+                        IRWrite = 1'b0;
+                        RegWrite = 1'b0;
+
+                        SignExtndCtrl = 1'b0;
+                    end
+                    else if(COUNTER == 1) begin
+                        divOP = 1'b0;
+                        multOP = 1'b0;
+                        shiftOP = 3'b000;
+                        shiftCtrl = 3'b000;
+                        ALUOP = 3'b000;
+
+                        WriteData = 3'b010; //
+                        muxShiftS = 2'b00;
+                        muxShiftIn = 2'b00;
+                        RegDst = 2'b01; //
+                        muxPCWriteCondSource = 1'b0;
+                        PCSrc = 2'b00;
+                        MultDiv = 1'b0;
+                        IorD = 2'b00;
+                        ExCause = 2'b00;
+                        ALUSrcA = 2'b00;
+                        ALUSrcB = 2'b00;
+                        MemA = 1'b0;
+                        MemB = 1'b0;
+
+                        COUNTER = COUNTER + 1; //
+                        STATE = ST_AND;
+
+                        PCWriteCond = 1'b0;
+                        PCWrite = 1'b0;
+                        MDRCtrl = 1'b0;
+                        LoadAB = 1'b0;
+                        ALUOut = 1'b0;
+                        EPCWrite = 1'b0;
+                        HiLow = 1'b0;
+                        AuxMultDivA = 1'b0;
+                        AuxMultDivB = 1'b0;
+                        SCtrl = 2'b00;
+                        LCtrl = 2'b00;
+
+                        MemWrite = 1'b0;
+                        MemRead = 1'b0;
+                        IRWrite = 1'b0;
+                        RegWrite = 1'b1; //
 
                         SignExtndCtrl = 1'b0;
                     end
