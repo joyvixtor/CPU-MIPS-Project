@@ -46,8 +46,7 @@ module controlUnit(
     output reg [1:0] LCtrl,
 
     // COR VERDE NO DIAGRAMA
-    output reg MemWrite,
-    output reg MemRead,
+    output reg MemReadWrite,
     output reg IRWrite,
     output reg RegWrite,
 
@@ -168,8 +167,7 @@ module controlUnit(
             LCtrl = 2'b00;
 
             //REGISTRADORES GRANDES (VERDES)
-            MemWrite = 1'b0;
-            MemRead = 1'b0;
+            MemReadWrite = 1'b0;
             IRWrite = 1'b0;
             RegWrite = 1'b1; //
 
@@ -212,8 +210,7 @@ module controlUnit(
             SCtrl = 2'b00;
             LCtrl = 2'b00;
 
-            MemWrite = 1'b0;
-            MemRead = 1'b0;
+            MemReadWrite = 1'b0;
             IRWrite = 1'b0;
             RegWrite = 1'b0;
 
@@ -256,8 +253,7 @@ module controlUnit(
             SCtrl = 2'b00;
             LCtrl = 2'b00;
 
-            MemWrite = 1'b0;
-            MemRead = 1'b0;
+            MemReadWrite = 1'b0;
             IRWrite = 1'b0;
             RegWrite = 1'b0;
 
@@ -310,8 +306,7 @@ module controlUnit(
                         SCtrl = 2'b00;
                         LCtrl = 2'b00;
 
-                        MemWrite = 1'b0;
-                        MemRead = 1'b0;
+                        MemReadWrite = 1'b0;
                         IRWrite = 1'b1; //
                         RegWrite = 1'b0;
 
@@ -354,8 +349,7 @@ module controlUnit(
                         SCtrl = 2'b00;
                         LCtrl = 2'b00;
 
-                        MemWrite = 1'b0;
-                        MemRead = 1'b0;
+                        MemReadWrite = 1'b0;
                         IRWrite = 1'b0;
                         RegWrite = 1'b0;
 
@@ -432,8 +426,7 @@ module controlUnit(
                         SCtrl = 2'b00;
                         LCtrl = 2'b00;
 
-                        MemWrite = 1'b0;
-                        MemRead = 1'b0;
+                        MemReadWrite = 1'b0;
                         IRWrite = 1'b0;
                         RegWrite = 1'b0;
 
@@ -479,8 +472,7 @@ module controlUnit(
                         SCtrl = 2'b00;
                         LCtrl = 2'b00;
 
-                        MemWrite = 1'b0;
-                        MemRead = 1'b0;
+                        MemReadWrite = 1'b0;
                         IRWrite = 1'b0;
                         RegWrite = 1'b0;
 
@@ -522,8 +514,7 @@ module controlUnit(
                         SCtrl = 2'b00;
                         LCtrl = 2'b00;
 
-                        MemWrite = 1'b0;
-                        MemRead = 1'b0;
+                        MemReadWrite = 1'b0;
                         IRWrite = 1'b0;
                         RegWrite = 1'b1;
 
@@ -565,8 +556,7 @@ module controlUnit(
                         SCtrl = 2'b00;
                         LCtrl = 2'b00;
 
-                        MemWrite = 1'b0;
-                        MemRead = 1'b0;
+                        MemReadWrite = 1'b0;
                         IRWrite = 1'b0;
                         RegWrite = 1'b0;
 
@@ -611,8 +601,7 @@ module controlUnit(
                         SCtrl = 2'b00;
                         LCtrl = 2'b00;
 
-                        MemWrite = 1'b0;
-                        MemRead = 1'b0;
+                        MemReadWrite = 1'b0;
                         IRWrite = 1'b0;
                         RegWrite = 1'b0;
 
@@ -654,8 +643,7 @@ module controlUnit(
                         SCtrl = 2'b00;
                         LCtrl = 2'b00;
 
-                        MemWrite = 1'b0;
-                        MemRead = 1'b0;
+                        MemReadWrite = 1'b0;
                         IRWrite = 1'b0;
                         RegWrite = 1'b1; //
 
@@ -697,8 +685,7 @@ module controlUnit(
                         SCtrl = 2'b00;
                         LCtrl = 2'b00;
 
-                        MemWrite = 1'b0;
-                        MemRead = 1'b0;
+                        MemReadWrite = 1'b0;
                         IRWrite = 1'b0;
                         RegWrite = 1'b0;
 
@@ -743,8 +730,7 @@ module controlUnit(
                         SCtrl = 2'b00;
                         LCtrl = 2'b00;
 
-                        MemWrite = 1'b0;
-                        MemRead = 1'b0;
+                        MemReadWrite = 1'b0;
                         IRWrite = 1'b0;
                         RegWrite = 1'b0;
 
@@ -786,8 +772,7 @@ module controlUnit(
                         SCtrl = 2'b00;
                         LCtrl = 2'b00;
 
-                        MemWrite = 1'b0;
-                        MemRead = 1'b0;
+                        MemReadWrite = 1'b0;
                         IRWrite = 1'b0;
                         RegWrite = 1'b0;
 
@@ -829,8 +814,7 @@ module controlUnit(
                         SCtrl = 2'b00;
                         LCtrl = 2'b00;
 
-                        MemWrite = 1'b0;
-                        MemRead = 1'b0;
+                        MemReadWrite = 1'b0;
                         IRWrite = 1'b0;
                         RegWrite = 1'b0;
 
@@ -875,8 +859,7 @@ module controlUnit(
                         SCtrl = 2'b00;
                         LCtrl = 2'b00;
 
-                        MemWrite = 1'b0;
-                        MemRead = 1'b0;
+                        MemReadWrite = 1'b0;
                         IRWrite = 1'b0;
                         RegWrite = 1'b0;
 
@@ -918,8 +901,7 @@ module controlUnit(
                         SCtrl = 2'b00;
                         LCtrl = 2'b00;
 
-                        MemWrite = 1'b0;
-                        MemRead = 1'b0;
+                        MemReadWrite = 1'b0;
                         IRWrite = 1'b0;
                         RegWrite = 1'b0;
 
@@ -961,8 +943,7 @@ module controlUnit(
                         SCtrl = 2'b00;
                         LCtrl = 2'b00;
 
-                        MemWrite = 1'b0;
-                        MemRead = 1'b0;
+                        MemReadWrite = 1'b0;
                         IRWrite = 1'b0;
                         RegWrite = 1'b0;
 
@@ -1006,8 +987,7 @@ module controlUnit(
                         SCtrl = 2'b00;
                         LCtrl = 2'b00;
 
-                        MemWrite = 1'b0;
-                        MemRead = 1'b0;
+                        MemReadWrite = 1'b0;
                         IRWrite = 1'b0;
                         RegWrite = 1'b0;
 
@@ -1051,8 +1031,7 @@ module controlUnit(
                         SCtrl = 2'b00;
                         LCtrl = 2'b00;
 
-                        MemWrite = 1'b0;
-                        MemRead = 1'b0;
+                        MemReadWrite = 1'b0;
                         IRWrite = 1'b0;
                         RegWrite = 1'b1; //
 
@@ -1094,8 +1073,7 @@ module controlUnit(
                         SCtrl = 2'b00;
                         LCtrl = 2'b00;
 
-                        MemWrite = 1'b0;
-                        MemRead = 1'b0;
+                        MemReadWrite = 1'b0;
                         IRWrite = 1'b0;
                         RegWrite = 1'b0;
 
@@ -1140,8 +1118,7 @@ module controlUnit(
                         SCtrl = 2'b00;
                         LCtrl = 2'b00;
 
-                        MemWrite = 1'b0;
-                        MemRead = 1'b0;
+                        MemReadWrite = 1'b0;
                         IRWrite = 1'b0;
                         RegWrite = 1'b1; //
 
@@ -1183,8 +1160,7 @@ module controlUnit(
                         SCtrl = 2'b00;
                         LCtrl = 2'b00;
 
-                        MemWrite = 1'b0;
-                        MemRead = 1'b0;
+                        MemReadWrite = 1'b0;
                         IRWrite = 1'b0;
                         RegWrite = 1'b0;
 
@@ -1229,8 +1205,7 @@ module controlUnit(
                         SCtrl = 2'b00;
                         LCtrl = 2'b00;
 
-                        MemWrite = 1'b0;
-                        MemRead = 1'b0;
+                        MemReadWrite = 1'b0;
                         IRWrite = 1'b0;
                         RegWrite = 1'b0;
 
@@ -1272,8 +1247,7 @@ module controlUnit(
                         SCtrl = 2'b00;
                         LCtrl = 2'b00;
 
-                        MemWrite = 1'b0;
-                        MemRead = 1'b0;
+                        MemReadWrite = 1'b0;
                         IRWrite = 1'b0;
                         RegWrite = 1'b0;
 
@@ -1315,8 +1289,7 @@ module controlUnit(
                         SCtrl = 2'b00;
                         LCtrl = 2'b00;
 
-                        MemWrite = 1'b0;
-                        MemRead = 1'b0;
+                        MemReadWrite = 1'b0;
                         IRWrite = 1'b0;
                         RegWrite = 1'b1; //
 
@@ -1361,8 +1334,7 @@ module controlUnit(
                         SCtrl = 2'b00;
                         LCtrl = 2'b00;
 
-                        MemWrite = 1'b0;
-                        MemRead = 1'b0;
+                        MemReadWrite = 1'b0;
                         IRWrite = 1'b0;
                         RegWrite = 1'b0;
 
@@ -1404,8 +1376,7 @@ module controlUnit(
                         SCtrl = 2'b00;
                         LCtrl = 2'b00;
 
-                        MemWrite = 1'b0;
-                        MemRead = 1'b0;
+                        MemReadWrite = 1'b0;
                         IRWrite = 1'b0;
                         RegWrite = 1'b0;
 
@@ -1447,8 +1418,7 @@ module controlUnit(
                         SCtrl = 2'b00;
                         LCtrl = 2'b00;
 
-                        MemWrite = 1'b0;
-                        MemRead = 1'b0;
+                        MemReadWrite = 1'b0;
                         IRWrite = 1'b0;
                         RegWrite = 1'b1; //
 
@@ -1493,8 +1463,7 @@ module controlUnit(
                         SCtrl = 2'b00;
                         LCtrl = 2'b00;
 
-                        MemWrite = 1'b0;
-                        MemRead = 1'b0;
+                        MemReadWrite = 1'b0;
                         IRWrite = 1'b0;
                         RegWrite = 1'b0;
 
@@ -1536,8 +1505,7 @@ module controlUnit(
                         SCtrl = 2'b00;
                         LCtrl = 2'b00;
 
-                        MemWrite = 1'b0;
-                        MemRead = 1'b0;
+                        MemReadWrite = 1'b0;
                         IRWrite = 1'b0;
                         RegWrite = 1'b1;
 
@@ -1579,8 +1547,7 @@ module controlUnit(
                         SCtrl = 2'b00;
                         LCtrl = 2'b00;
 
-                        MemWrite = 1'b0;
-                        MemRead = 1'b0;
+                        MemReadWrite = 1'b0;
                         IRWrite = 1'b0;
                         RegWrite = 1'b0;
 
@@ -1625,8 +1592,7 @@ module controlUnit(
                         SCtrl = 2'b00;
                         LCtrl = 2'b00;
 
-                        MemWrite = 1'b0;
-                        MemRead = 1'b0;
+                        MemReadWrite = 1'b0;
                         IRWrite = 1'b0;
                         RegWrite = 1'b0;
 
@@ -1670,8 +1636,7 @@ module controlUnit(
                         SCtrl = 2'b00;
                         LCtrl = 2'b00;
 
-                        MemWrite = 1'b0;
-                        MemRead = 1'b0;
+                        MemReadWrite = 1'b0;
                         IRWrite = 1'b0;
                         RegWrite = 1'b1; //
 
@@ -1715,8 +1680,7 @@ module controlUnit(
                         SCtrl = 2'b00;
                         LCtrl = 2'b00;
 
-                        MemWrite = 1'b0;
-                        MemRead = 1'b0;
+                        MemReadWrite = 1'b0;
                         IRWrite = 1'b0;
                         RegWrite = 1'b0;
 
@@ -1758,8 +1722,7 @@ module controlUnit(
                         SCtrl = 2'b00;
                         LCtrl = 2'b00;
 
-                        MemWrite = 1'b0;
-                        MemRead = 1'b0;
+                        MemReadWrite = 1'b0;
                         IRWrite = 1'b0;
                         RegWrite = 1'b1; //
 
@@ -1801,8 +1764,7 @@ module controlUnit(
                         SCtrl = 2'b00;
                         LCtrl = 2'b00;
 
-                        MemWrite = 1'b0;
-                        MemRead = 1'b0;
+                        MemReadWrite = 1'b0;
                         IRWrite = 1'b0;
                         RegWrite = 1'b0;
 
@@ -1847,8 +1809,7 @@ module controlUnit(
                         SCtrl = 2'b00;
                         LCtrl = 2'b00;
 
-                        MemWrite = 1'b0;
-                        MemRead = 1'b0;
+                        MemReadWrite = 1'b0;
                         IRWrite = 1'b0;
                         RegWrite = 1'b0;
 
@@ -1890,8 +1851,7 @@ module controlUnit(
                         SCtrl = 2'b00;
                         LCtrl = 2'b00;
 
-                        MemWrite = 1'b0;
-                        MemRead = 1'b0;
+                        MemReadWrite = 1'b0;
                         IRWrite = 1'b0;
                         RegWrite = 1'b0;
 
@@ -1933,8 +1893,7 @@ module controlUnit(
                         SCtrl = 2'b00;
                         LCtrl = 2'b00; //
 
-                        MemWrite = 1'b0;
-                        MemRead = 1'b0;
+                        MemReadWrite = 1'b0;
                         IRWrite = 1'b0;
                         RegWrite = 1'b1; //
 
@@ -1976,8 +1935,7 @@ module controlUnit(
                         SCtrl = 2'b00;
                         LCtrl = 2'b00;
 
-                        MemWrite = 1'b0;
-                        MemRead = 1'b0;
+                        MemReadWrite = 1'b0;
                         IRWrite = 1'b0;
                         RegWrite = 1'b0;
 
@@ -2022,8 +1980,7 @@ module controlUnit(
                         SCtrl = 2'b00;
                         LCtrl = 2'b00;
 
-                        MemWrite = 1'b0;
-                        MemRead = 1'b0;
+                        MemReadWrite = 1'b0;
                         IRWrite = 1'b0;
                         RegWrite = 1'b0;
 
@@ -2065,8 +2022,7 @@ module controlUnit(
                         SCtrl = 2'b10 ; 
                         LCtrl = 2'b00;
 
-                        MemWrite = 1'b0; 
-                        MemRead = 1'b1; //
+                        MemReadWrite = 1'b0; //
                         IRWrite = 1'b0;
                         RegWrite = 1'b0;
 
@@ -2108,8 +2064,7 @@ module controlUnit(
                         SCtrl = 2'b10; //
                         LCtrl = 2'b00;
 
-                        MemWrite = 1'b1; //
-                        MemRead = 1'b0;
+                        MemReadWrite = 1'b1; //
                         IRWrite = 1'b0;
                         RegWrite = 1'b0;
 
@@ -2151,8 +2106,7 @@ module controlUnit(
                         SCtrl = 2'b00;
                         LCtrl = 2'b00;
 
-                        MemWrite = 1'b0;
-                        MemRead = 1'b0;
+                        MemReadWrite = 1'b0;
                         IRWrite = 1'b0;
                         RegWrite = 1'b0;
 
@@ -2197,8 +2151,7 @@ module controlUnit(
                         SCtrl = 2'b00;
                         LCtrl = 2'b00;
 
-                        MemWrite = 1'b0;
-                        MemRead = 1'b0;
+                        MemReadWrite = 1'b0;
                         IRWrite = 1'b0;
                         RegWrite = 1'b0;
 
@@ -2240,8 +2193,7 @@ module controlUnit(
                         SCtrl = 2'b00;
                         LCtrl = 2'b00;
 
-                        MemWrite = 1'b0;
-                        MemRead = 1'b1; //
+                        MemReadWrite = 1'b1; //
                         IRWrite = 1'b0;
                         RegWrite = 1'b0;
 
@@ -2283,8 +2235,7 @@ module controlUnit(
                         SCtrl = 2'b10; //
                         LCtrl = 2'b00;
 
-                        MemWrite = 1'b1; //
-                        MemRead = 1'b0; 
+                        MemReadWrite = 1'b1; // 
                         IRWrite = 1'b0;
                         RegWrite = 1'b0;
 
@@ -2326,8 +2277,7 @@ module controlUnit(
                         SCtrl = 2'b00;
                         LCtrl = 2'b00;
 
-                        MemWrite = 1'b0;
-                        MemRead = 1'b0;
+                        MemReadWrite = 1'b0;
                         IRWrite = 1'b0;
                         RegWrite = 1'b0;
 
@@ -2372,8 +2322,7 @@ module controlUnit(
                         SCtrl = 2'b00;
                         LCtrl = 2'b00;
 
-                        MemWrite = 1'b0;
-                        MemRead = 1'b0;
+                        MemReadWrite = 1'b0;
                         IRWrite = 1'b0;
                         RegWrite = 1'b0;
 
@@ -2415,8 +2364,7 @@ module controlUnit(
                         SCtrl = 2'b00;
                         LCtrl = 2'b00;
 
-                        MemWrite = 1'b0;
-                        MemRead = 1'b0;
+                        MemReadWrite = 1'b0;
                         IRWrite = 1'b0;
                         RegWrite = 1'b0;
 
@@ -2458,8 +2406,7 @@ module controlUnit(
                         SCtrl = 2'b00;
                         LCtrl = 2'b10; //
 
-                        MemWrite = 1'b0;
-                        MemRead = 1'b0;
+                        MemReadWrite = 1'b0;
                         IRWrite = 1'b0;
                         RegWrite = 1'b1; //
 
@@ -2501,8 +2448,7 @@ module controlUnit(
                         SCtrl = 2'b00;
                         LCtrl = 2'b00;
 
-                        MemWrite = 1'b0;
-                        MemRead = 1'b0;
+                        MemReadWrite = 1'b0;
                         IRWrite = 1'b0;
                         RegWrite = 1'b0;
 
@@ -2547,8 +2493,7 @@ module controlUnit(
                         SCtrl = 2'b00;
                         LCtrl = 2'b00;
 
-                        MemWrite = 1'b0;
-                        MemRead = 1'b0;
+                        MemReadWrite = 1'b0;
                         IRWrite = 1'b0;
                         RegWrite = 1'b0;
 
@@ -2590,8 +2535,7 @@ module controlUnit(
                         SCtrl = 2'b00;
                         LCtrl = 2'b00;
 
-                        MemWrite = 1'b0;
-                        MemRead = 1'b0;
+                        MemReadWrite = 1'b0;
                         IRWrite = 1'b0;
                         RegWrite = 1'b0;
 
@@ -2636,8 +2580,7 @@ module controlUnit(
                         SCtrl = 2'b00;
                         LCtrl = 2'b00;
 
-                        MemWrite = 1'b0;
-                        MemRead = 1'b0;
+                        MemReadWrite = 1'b0;
                         IRWrite = 1'b0;
                         RegWrite = 1'b0;
 
@@ -2679,8 +2622,7 @@ module controlUnit(
                         SCtrl = 2'b00;
                         LCtrl = 2'b00;
 
-                        MemWrite = 1'b0;
-                        MemRead = 1'b0;
+                        MemReadWrite = 1'b0;
                         IRWrite = 1'b0;
                         RegWrite = 1'b0;
 
@@ -2725,8 +2667,7 @@ module controlUnit(
                         SCtrl = 2'b00;
                         LCtrl = 2'b00;
 
-                        MemWrite = 1'b0;
-                        MemRead = 1'b0;
+                        MemReadWrite = 1'b0;
                         IRWrite = 1'b0;
                         RegWrite = 1'b0;
 
@@ -2768,8 +2709,7 @@ module controlUnit(
                         SCtrl = 2'b00;
                         LCtrl = 2'b10; //
 
-                        MemWrite = 1'b0;
-                        MemRead = 1'b1; //
+                        MemReadWrite = 1'b0; //
                         IRWrite = 1'b0;
                         RegWrite = 1'b0;
 
@@ -2814,8 +2754,7 @@ module controlUnit(
                         SCtrl = 2'b00;
                         LCtrl = 2'b00;
 
-                        MemWrite = 1'b0;
-                        MemRead = 1'b0;
+                        MemReadWrite = 1'b0;
                         IRWrite = 1'b0;
                         RegWrite = 1'b0;
 
@@ -2857,8 +2796,7 @@ module controlUnit(
                         SCtrl = 2'b00;
                         LCtrl = 2'b00;
 
-                        MemWrite = 1'b0;
-                        MemRead = 1'b0;
+                        MemReadWrite = 1'b0;
                         IRWrite = 1'b0;
                         RegWrite = 1'b0;
 
@@ -2900,8 +2838,7 @@ module controlUnit(
                         SCtrl = 2'b00;
                         LCtrl = 2'b00;
 
-                        MemWrite = 1'b0;
-                        MemRead = 1'b0;
+                        MemReadWrite = 1'b0;
                         IRWrite = 1'b0;
                         RegWrite = 1'b0;
 
@@ -2946,8 +2883,7 @@ module controlUnit(
                     SCtrl = 2'b00;
                     LCtrl = 2'b00;
 
-                    MemWrite = 1'b0;
-                    MemRead = 1'b0;
+                    MemReadWrite = 1'b0;
                     IRWrite = 1'b0;
                     RegWrite = 1'b0;
 
@@ -2991,8 +2927,7 @@ module controlUnit(
                         SCtrl = 2'b00;
                         LCtrl = 2'b00;
 
-                        MemWrite = 1'b0;
-                        MemRead = 1'b0;
+                        MemReadWrite = 1'b0;
                         IRWrite = 1'b0;
                         RegWrite = 1'b0;
 
@@ -3034,8 +2969,7 @@ module controlUnit(
                         SCtrl = 2'b00;
                         LCtrl = 2'b00;
 
-                        MemWrite = 1'b0;
-                        MemRead = 1'b0;
+                        MemReadWrite = 1'b0;
                         IRWrite = 1'b0;
                         RegWrite = 1'b0;
 

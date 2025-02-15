@@ -34,8 +34,7 @@ module cpu(
     wire divOP;
 
     // memory signals
-    wire MemRead;
-    wire MemWrite;
+    wire MemReadWrite;
 
     // instruction register signals
     wire IRWrite;
@@ -152,8 +151,7 @@ module cpu(
     Memoria Memory(
         //signals
         clk,
-        MemRead,
-        MemWrite,
+        MemReadWrite,
         //inputs
         outMuxIorD,
         outSCtrl,
@@ -556,8 +554,7 @@ module cpu(
         AuxMultDivB,
         PCWriteCond,
         PCWrite,
-        MemWrite,
-        MemRead,
+        MemReadWrite,
         MemA,
         MemB,
         IRWrite,
