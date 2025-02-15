@@ -108,11 +108,10 @@ module cpu(
 
     wire [31:0] multHighHalf;
     wire [31:0] multLowHalf;
+
+    wire divByZero;
     wire [31:0] divRemainder;
     wire [31:0] divQuotient;
-
-    wire [31:0] outMult;
-    wire [31:0] outDiv;
 
     wire [31:0] outMuxShiftIn;
     wire [31:0] outMuxShiftS;
@@ -207,7 +206,8 @@ module cpu(
         outAuxMultDivA,
         outAuxMultDivB,
         //outputs
-        outMult,
+        multHighHalf,
+        multLowHalf
     );
 
     //Unidade de Div
@@ -220,7 +220,9 @@ module cpu(
         outAuxMultDivA,
         outAuxMultDivB,
         //outputs
-        outDiv
+        divByZero,
+        divQuotient,
+        divRemainder
     );
 
     //Unidade de Shifting
