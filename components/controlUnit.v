@@ -2247,7 +2247,7 @@ module controlUnit(
 
                         SignExtndCtrl = 1'b0;
                     end
-                    else if (COUNTER == 3 || COUNTER 4) begin
+                    else if (COUNTER == 3 || COUNTER == 4) begin
                         divOP = 1'b0;
                         multOP = 1'b0;
                         shiftOP = 3'b000;
