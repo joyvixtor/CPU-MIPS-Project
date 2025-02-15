@@ -43,7 +43,7 @@ module cpu(
     wire RegWrite;
 
     // ALUOP
-    wire [2:0] ALUOp;
+    wire [2:0] ALUOP;
 
     //mult, div and shifting units
     wire [2:0] ShiftCtrl;
@@ -64,7 +64,7 @@ module cpu(
     wire [4:0] instruction20_16;
     wire [15:0] instruction15_0;
 
-    wire [31:0] outMuxRegDst;
+    wire [4:0] outMuxRegDst;
     wire [31:0] outMuxWriteData;
     wire [31:0] outDataA;
     wire [31:0] outDataB;
@@ -101,7 +101,6 @@ module cpu(
 
     wire [31:0] outShiftingUnit;
 
-    wire outALULT;
     wire [31:0] outEx1to32;
 
     wire [31:0] outMuxAuxMultDivA;
@@ -124,38 +123,46 @@ module cpu(
     wire outALUEQ;
     wire outALUOverflow;
     wire outALUzero;
+    wire outALUNegative;
+    wire outALUGT;
+    wire outALULT;
 
     wire [31:0] outShiftLeft_2;
     wire [31:0] outShiftLeft_2_26to28;
     wire [31:0] outMuxPCWriteCondSource;
     wire [31:0] outPCSrc;
 
+
+
     // COMPONENTES
     //ALU
     ula32 alu(
-        //signals
-        ALUOP,
         //inputs
         outMuxAluA,
         outMuxAluB,
+        //signals
+        ALUOP,
         //outputs
         outALUResult,
-        outALULT,
-        outALUEQ,
         outALUOverflow,
-        outALUZero
+        outALUNegative,
+        outALUZero,
+        outALUEQ,
+        outALUGT,
+        outALULT
     );
 
 
     // Memoria Memory
     Memoria Memory(
+        //inputs
+        outMuxIorD,
         //signals
         clk,
         MemReadWrite,
         //inputs
-        outMuxIorD,
         outSCtrl,
-        //output
+        //outputs
         outMemory
     );
 
