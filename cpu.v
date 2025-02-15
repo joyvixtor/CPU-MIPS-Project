@@ -114,7 +114,7 @@ module cpu(
     wire [31:0] divQuotient;
 
     wire [31:0] outMuxShiftIn;
-    wire [31:0] outMuxShiftS;
+    wire [4:0] outMuxShiftS;
     wire [31:0] outSignExtnd_8to32_16to32;
 
     wire [31:0] outMuxAluA;
@@ -127,10 +127,9 @@ module cpu(
     wire outALULT;
 
     wire [31:0] outShiftLeft_2;
-    wire [31:0] outShiftLeft_2_26to28;
-    wire [31:0] outMuxPCWriteCondSource;
+    wire [27:0] outShiftLeft_2_26to28;
+    wire outMuxPCWriteCondSource;
     wire [31:0] outPCSrc;
-
 
 
     // COMPONENTES
@@ -232,8 +231,8 @@ module cpu(
         reset,
         ShiftCtrl,
         //inputs
-        outMuxShiftIn,
         outMuxShiftS,
+        outMuxShiftIn,
         //outputs
         outShiftingUnit
     );
@@ -256,7 +255,7 @@ module cpu(
         RegDst,
         //inputs
         instruction20_16,
-        instruction15_0,
+        instruction15_0[15:11],
         //outputs
         outMuxRegDst
     );
@@ -329,7 +328,7 @@ module cpu(
         //signals
         ShiftS,
         //inputs
-        instruction15_0,
+        instruction15_0[10:6],
         //outputs
         outMuxShiftS
     );
@@ -360,7 +359,7 @@ module cpu(
         PCSrc,
         //inputs
         outALUResult,
-        outShiftLeft_2_26to28,
+        {outPC[31:28], outShiftLeft_2_26to28},
         outALUOut,
         outEPC,
         //outputs
@@ -372,7 +371,6 @@ module cpu(
         PCWriteCondSource,
         //inputs
         outALUZero,
-        outALUEQ,
         //outputs
         outMuxPCWriteCondSource
     );
@@ -389,8 +387,8 @@ module cpu(
         //signals
         SignExtndCtrl,
         //input
+        outMDR[7:0],
         instruction15_0,
-        outMDR,
         //output
         outSignExtnd_8to32_16to32
     );
@@ -404,9 +402,7 @@ module cpu(
 
     shiftLeft26_28 SL226to28(
         //input
-        instruction25_21,
-        instruction20_16,
-        instruction15_0,
+        {instruction25_21, instruction20_16, instruction15_0},
         //output
         outShiftLeft_2_26to28
     );
@@ -502,10 +498,8 @@ module cpu(
         outMDR
     );
 
-    Registrador LAux(
+    loadAux LAux(
         //signals
-        clk,
-        reset,
         LCtrl,
         //inputs
         outMDR,
@@ -513,13 +507,12 @@ module cpu(
         outLAux
     );
 
-    Registrador SAux(
+    storeAux SAux(
         //signals
-        clk,
-        reset,
         SCtrl,
         //inputs
         outMDR,
+        outB,
         //outputs
         outSAux
     );
@@ -552,36 +545,53 @@ module cpu(
         clk,
         reset,
         outALUOverflow,
-        outALUZero,
+        divByZero,
+        instruction31_26,
+        instruction15_0[5:0],
+
+        //Operations
+        divOP,
+        multOP,
         ALUOP,
-        instruction31_26[5:0],
-        //outputs
-        PCWriteCondSource,
-        ExCause,
-        IorD,
-        AuxMultDivA,
-        AuxMultDivB,
-        PCWriteCond,
-        PCWrite,
-        MemReadWrite,
-        MemA,
-        MemB,
-        IRWrite,
-        RegWrite,
-        WriteData,
-        RegDst,
-        SCtrl,
-        LCtrl,
-        MDRCtrl,
-        PCSrc,
         ShiftCtrl,
-        ShiftIn,
+
+        //Muxes
+        WriteData,
         ShiftS,
-        EPCWrite,
+        ShiftIn,
+        RegDst,
+        PCWriteCondSource,
+        PCSrc,
+        MultDiv,
+        IorD,
+        ExCause,
         ALUSrcA,
         ALUSrcB,
-        MultDiv,
+        MemA,
+        MemB,
+
+        //REGISTRADORES
+        //COR VERMELHA
+        PCWriteCond,
+        PCWrite,
+        MDRCtrl,
+        LoadAB,
+        ALUOut,
+        EPCWrite,
+        HiLow,
+        AuxMultDivA,
+        AuxMultDivB,
+        SCtrl,
+        LCtrl,
+
+        //COR VERDE
+        MemReadWrite,
+        IRWrite,
+        RegWrite,
+
+        //SIGN EXTEND ESPECIAL
         SignExtndCtrl
+
     );
 
 

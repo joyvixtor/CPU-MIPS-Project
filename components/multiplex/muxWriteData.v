@@ -1,7 +1,7 @@
 module muxWriteData (
     input wire [2:0] selector,
-    input wire [4:0] data_0, data_1, data_2, data_3, data_4, data_5,
-    output reg [4:0] out
+    input wire [31:0] data_0, data_1, data_2, data_3, data_4, data_5,
+    output reg [31:0] out
 );
 
     always @* begin

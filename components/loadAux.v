@@ -1,12 +1,18 @@
 module loadAux (
-    input wire [1:0] selector,
-    input wire [31:0] data_in,
-    output wire [31:0] data_out
+    input wire [1:0] LScontroler,
+    input wire [31:0] MDR_out,
+    output reg [31:0] ls_component_out
 );
 
-    assign data_out = (selector == 2'b00) ? data_in :
-                      (selector == 2'b01) ? {16'b0, data_in[15:0]} :
-                      (selector == 2'b10) ? {24'b0, data_in[7:0]} :
-                      32'dx;
-
+always @(*) begin
+        case (LScontroler)
+            2'b00: 
+                ls_component_out <= MDR_out;
+            2'b10:
+                ls_component_out <= {16'd0, MDR_out[15:0]};
+            2'b01:
+                 ls_component_out <= {24'd0, MDR_out[7:0]};
+        endcase
+    
+end
 endmodule

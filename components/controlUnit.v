@@ -13,7 +13,6 @@ module controlUnit(
     output reg divOP,
     output reg multOP,
     output reg [2:0] ALUOP,
-    output reg [2:0] shiftOP,
     output reg [2:0] shiftCtrl,
 
     //Muxes
@@ -131,7 +130,6 @@ module controlUnit(
             //SINAIS OPERACOES
             divOP = 1'b0;
             multOP = 1'b0;
-            shiftOP = 3'b000;
             shiftCtrl = 3'b000;
             ALUOP = 3'b000;
 
@@ -177,7 +175,6 @@ module controlUnit(
         else if (overflow && STATE != ST_AND) begin
             divOP = 1'b0;
             multOP = 1'b0;
-            shiftOP = 3'b000;
             shiftCtrl = 3'b000;
             ALUOP = 3'b000;
 
@@ -220,7 +217,6 @@ module controlUnit(
         else if (divByZero) begin
             divOP = 1'b0;
             multOP = 1'b0;
-            shiftOP = 3'b000;
             shiftCtrl = 3'b000;
             ALUOP = 3'b000;
 
@@ -267,7 +263,6 @@ module controlUnit(
                     if(COUNTER <= 2) begin
                         divOP = 1'b0;
                         multOP = 1'b0;
-                        shiftOP = 3'b000;
                         shiftCtrl = 3'b000;
                         ALUOP = 3'b001; //
 
@@ -317,7 +312,6 @@ module controlUnit(
                     else if (COUNTER == 3) begin
                         divOP = 1'b0;
                         multOP = 1'b0;
-                        shiftOP = 3'b000;
                         shiftCtrl = 3'b000;
                         ALUOP = 3'b001;
 
@@ -394,7 +388,6 @@ module controlUnit(
 
                         divOP = 1'b0;
                         multOP = 1'b0;
-                        shiftOP = 3'b000;
                         shiftCtrl = 3'b000;
                         ALUOP = 3'b000;
 
@@ -439,7 +432,6 @@ module controlUnit(
                     if (COUNTER == 0) begin
                         divOP = 1'b0;
                         multOP = 1'b0;
-                        shiftOP = 3'b000;
                         shiftCtrl = 3'b000;
                         ALUOP = 3'b001; //
 
@@ -481,7 +473,6 @@ module controlUnit(
                     else if(COUNTER == 1) begin
                         divOP = 1'b0;
                         multOP = 1'b0;
-                        shiftOP = 3'b000;
                         shiftCtrl = 3'b000;
                         ALUOP = 3'b000;
 
@@ -523,7 +514,6 @@ module controlUnit(
                     else if(COUNTER == 2) begin
                         divOP = 1'b0;
                         multOP = 1'b0;
-                        shiftOP = 3'b000;
                         shiftCtrl = 3'b000;
                         ALUOP = 3'b000;
 
@@ -568,7 +558,6 @@ module controlUnit(
                     if(COUNTER == 0) begin
                         divOP = 1'b0;
                         multOP = 1'b0;
-                        shiftOP = 3'b000;
                         shiftCtrl = 3'b000;
                         ALUOP = 3'b001; //
 
@@ -610,7 +599,6 @@ module controlUnit(
                     else if(COUNTER == 1) begin
                         divOP = 1'b0;
                         multOP = 1'b0;
-                        shiftOP = 3'b000;
                         shiftCtrl = 3'b000;
                         ALUOP = 3'b000;
 
@@ -652,7 +640,6 @@ module controlUnit(
                     else if(COUNTER == 2) begin
                         divOP = 1'b0;
                         multOP = 1'b0;
-                        shiftOP = 3'b000;
                         shiftCtrl = 3'b000;
                         ALUOP = 3'b000;
 
@@ -697,7 +684,6 @@ module controlUnit(
                     if (COUNTER == 0) begin
                         divOP = 1'b1; //
                         multOP = 1'b0;
-                        shiftOP = 3'b000;
                         shiftCtrl = 3'b000;
                         ALUOP = 3'b000;
 
@@ -739,7 +725,6 @@ module controlUnit(
                     else if (COUNTER <= 34) begin
                         divOP = 1'b0; //
                         multOP = 1'b0;
-                        shiftOP = 3'b000;
                         shiftCtrl = 3'b000;
                         ALUOP = 3'b000;
 
@@ -781,7 +766,6 @@ module controlUnit(
                     else if (COUNTER == 35) begin
                         divOP = 1'b0;
                         multOP = 1'b0;
-                        shiftOP = 3'b000;
                         shiftCtrl = 3'b000;
                         ALUOP = 3'b000;
 
@@ -826,7 +810,6 @@ module controlUnit(
                     if (COUNTER == 0) begin
                         divOP = 1'b0;
                         multOP = 1'b1; //
-                        shiftOP = 3'b000;
                         shiftCtrl = 3'b000;
                         ALUOP = 3'b000;
 
@@ -868,7 +851,6 @@ module controlUnit(
                     else if (COUNTER <= 34) begin
                         divOP = 1'b0;
                         multOP = 1'b0; //
-                        shiftOP = 3'b000;
                         shiftCtrl = 3'b000;
                         ALUOP = 3'b000;
 
@@ -910,7 +892,6 @@ module controlUnit(
                     else if (COUNTER == 35) begin
                         divOP = 1'b0;
                         multOP = 1'b0;
-                        shiftOP = 3'b000;
                         shiftCtrl = 3'b000;
                         ALUOP = 3'b000;
 
@@ -954,7 +935,6 @@ module controlUnit(
                 ST_JR : begin
                     divOP = 1'b0;
                         multOP = 1'b0;
-                        shiftOP = 3'b000;
                         shiftCtrl = 3'b000;
                         ALUOP = 3'b000; //
 
@@ -998,7 +978,6 @@ module controlUnit(
                     if (COUNTER <= 1) begin
                         divOP = 1'b0;
                         multOP = 1'b0;
-                        shiftOP = 3'b000;
                         shiftCtrl = 3'b000;
                         ALUOP = 3'b000;
 
@@ -1040,7 +1019,6 @@ module controlUnit(
                     else if (COUNTER == 2) begin
                         divOP = 1'b0;
                         multOP = 1'b0;
-                        shiftOP = 3'b000;
                         shiftCtrl = 3'b000;
                         ALUOP = 3'b000;
 
@@ -1085,7 +1063,6 @@ module controlUnit(
                     if (COUNTER <= 1) begin
                         divOP = 1'b0;
                         multOP = 1'b0;
-                        shiftOP = 3'b000;
                         shiftCtrl = 3'b000;
                         ALUOP = 3'b000;
 
@@ -1127,7 +1104,6 @@ module controlUnit(
                     if (COUNTER == 2) begin
                         divOP = 1'b0;
                         multOP = 1'b0;
-                        shiftOP = 3'b000;
                         shiftCtrl = 3'b000;
                         ALUOP = 3'b000;
 
@@ -1172,7 +1148,6 @@ module controlUnit(
                     if (COUNTER == 0) begin
                         divOP = 1'b0;
                         multOP = 1'b0;
-                        shiftOP = 3'b000;
                         shiftCtrl = 3'b001; //
                         ALUOP = 3'b000; 
 
@@ -1214,7 +1189,6 @@ module controlUnit(
                     else if (COUNTER == 1) begin
                         divOP = 1'b0;
                         multOP = 1'b0;
-                        shiftOP = 3'b000;
                         shiftCtrl = 3'b010; //
                         ALUOP = 3'b000;
 
@@ -1256,7 +1230,6 @@ module controlUnit(
                     else if (COUNTER == 2) begin
                         divOP = 1'b0;
                         multOP = 1'b0;
-                        shiftOP = 3'b000;
                         shiftCtrl = 3'b000; //
                         ALUOP = 3'b000;
 
@@ -1301,7 +1274,6 @@ module controlUnit(
                     if (COUNTER == 0) begin
                         divOP = 1'b0;
                         multOP = 1'b0;
-                        shiftOP = 3'b000;
                         shiftCtrl = 3'b001; //
                         ALUOP = 3'b000; 
 
@@ -1343,7 +1315,6 @@ module controlUnit(
                     else if (COUNTER == 1) begin
                         divOP = 1'b0;
                         multOP = 1'b0;
-                        shiftOP = 3'b000;
                         shiftCtrl = 3'b100; //
                         ALUOP = 3'b000;
 
@@ -1385,7 +1356,6 @@ module controlUnit(
                     else if (COUNTER == 2) begin
                         divOP = 1'b0;
                         multOP = 1'b0;
-                        shiftOP = 3'b000;
                         shiftCtrl = 3'b000; //
                         ALUOP = 3'b000;
 
@@ -1430,7 +1400,6 @@ module controlUnit(
                     if (COUNTER == 0) begin
                         divOP = 1'b0;
                         multOP = 1'b0;
-                        shiftOP = 3'b000;
                         shiftCtrl = 3'b000;
                         ALUOP = 3'b010; //
 
@@ -1472,7 +1441,6 @@ module controlUnit(
                     else if (COUNTER == 1) begin
                         divOP = 1'b0;
                         multOP = 1'b0;
-                        shiftOP = 3'b000;
                         shiftCtrl = 3'b000;
                         ALUOP = 3'b000;
 
@@ -1514,7 +1482,6 @@ module controlUnit(
                     else if (COUNTER == 2) begin
                         divOP = 1'b0;
                         multOP = 1'b0;
-                        shiftOP = 3'b000;
                         shiftCtrl = 3'b000;
                         ALUOP = 3'b000;
 
@@ -1559,7 +1526,6 @@ module controlUnit(
                     if (COUNTER == 0) begin
                         divOP = 1'b0;
                         multOP = 1'b0;
-                        shiftOP = 3'b000;
                         shiftCtrl = 3'b000;
                         ALUOP = 3'b000; //
 
@@ -1603,7 +1569,6 @@ module controlUnit(
                 ST_SLT : begin
                     divOP = 1'b0;
                         multOP = 1'b0;
-                        shiftOP = 3'b000;
                         shiftCtrl = 3'b000;
                         ALUOP = 3'b111; //
 
@@ -1647,7 +1612,6 @@ module controlUnit(
                     if(COUNTER == 0) begin
                         divOP = 1'b0;
                         multOP = 1'b0;
-                        shiftOP = 3'b000;
                         shiftCtrl = 3'b000;
                         ALUOP = 3'b001; //
 
@@ -1689,7 +1653,6 @@ module controlUnit(
                     else if(COUNTER == 1) begin
                         divOP = 1'b0;
                         multOP = 1'b0;
-                        shiftOP = 3'b000;
                         shiftCtrl = 3'b000;
                         ALUOP = 3'b000;
 
@@ -1731,7 +1694,6 @@ module controlUnit(
                     else if(COUNTER == 2) begin
                         divOP = 1'b0;
                         multOP = 1'b0;
-                        shiftOP = 3'b000;
                         shiftCtrl = 3'b000;
                         ALUOP = 3'b000;
 
@@ -1776,7 +1738,6 @@ module controlUnit(
                     if(COUNTER == 0) begin
                         divOP = 1'b0;
                         multOP = 1'b0;
-                        shiftOP = 3'b000;
                         shiftCtrl = 3'b000;
                         ALUOP = 3'b001; //
 
@@ -1818,7 +1779,6 @@ module controlUnit(
                     else if(COUNTER == 1 || COUNTER == 2) begin
                         divOP = 1'b0;
                         multOP = 1'b0;
-                        shiftOP = 3'b000;
                         shiftCtrl = 3'b000;
                         ALUOP = 3'b000;
 
@@ -1860,7 +1820,6 @@ module controlUnit(
                     else if (COUNTER == 3 || COUNTER == 4) begin
                         divOP = 1'b0;
                         multOP = 1'b0;
-                        shiftOP = 3'b000;
                         shiftCtrl = 3'b000;
                         ALUOP = 3'b000;
 
@@ -1902,7 +1861,6 @@ module controlUnit(
                     else if (COUNTER == 5)begin
                         divOP = 1'b0;
                         multOP = 1'b0;
-                        shiftOP = 3'b000;
                         shiftCtrl = 3'b000;
                         ALUOP = 3'b000;
 
@@ -1947,7 +1905,6 @@ module controlUnit(
                     if(COUNTER == 0) begin
                         divOP = 1'b0;
                         multOP = 1'b0;
-                        shiftOP = 3'b000;
                         shiftCtrl = 3'b000;
                         ALUOP = 3'b001; //
 
@@ -1989,7 +1946,6 @@ module controlUnit(
                     else if (COUNTER == 1 || COUNTER == 2) begin
                         divOP = 1'b0;
                         multOP = 1'b0;
-                        shiftOP = 3'b000;
                         shiftCtrl = 3'b000;
                         ALUOP = 3'b000;
 
@@ -2031,7 +1987,6 @@ module controlUnit(
                     else if (COUNTER == 3 || COUNTER == 4) begin
                         divOP = 1'b0;
                         multOP = 1'b0;
-                        shiftOP = 3'b000;
                         shiftCtrl = 3'b000;
                         ALUOP = 3'b000;
 
@@ -2073,7 +2028,6 @@ module controlUnit(
                     else if (COUNTER == 5) begin
                         divOP = 1'b0;
                         multOP = 1'b0;
-                        shiftOP = 3'b000;
                         shiftCtrl = 3'b000;
                         ALUOP = 3'b000;
 
@@ -2118,7 +2072,6 @@ module controlUnit(
                     if (COUNTER == 0) begin
                         divOP = 1'b0;
                         multOP = 1'b0;
-                        shiftOP = 3'b000;
                         shiftCtrl = 3'b000;
                         ALUOP = 3'b001; //
 
@@ -2160,7 +2113,6 @@ module controlUnit(
                     else if (COUNTER == 1 || COUNTER == 2) begin
                         divOP = 1'b0;
                         multOP = 1'b0;
-                        shiftOP = 3'b000;
                         shiftCtrl = 3'b000;
                         ALUOP = 3'b000;
 
@@ -2202,7 +2154,6 @@ module controlUnit(
                     else if (COUNTER == 3 || COUNTER == 4) begin
                         divOP = 1'b0;
                         multOP = 1'b0;
-                        shiftOP = 3'b000;
                         shiftCtrl = 3'b000;
                         ALUOP = 3'b000;
 
@@ -2244,7 +2195,6 @@ module controlUnit(
                     else if (COUNTER == 5) begin
                         divOP = 1'b0;
                         multOP = 1'b0;
-                        shiftOP = 3'b000;
                         shiftCtrl = 3'b000;
                         ALUOP = 3'b000;
 
@@ -2289,7 +2239,6 @@ module controlUnit(
                     if (COUNTER == 0) begin
                         divOP = 1'b0;
                         multOP = 1'b0;
-                        shiftOP = 3'b000;
                         shiftCtrl = 3'b000;
                         ALUOP = 3'b001; //
 
@@ -2331,7 +2280,6 @@ module controlUnit(
                     else if (COUNTER == 1 || COUNTER == 2) begin
                         divOP = 1'b0;
                         multOP = 1'b0;
-                        shiftOP = 3'b000;
                         shiftCtrl = 3'b000;
                         ALUOP = 3'b000;
 
@@ -2373,7 +2321,6 @@ module controlUnit(
                     else if (COUNTER == 3 || COUNTER == 4) begin
                         divOP = 1'b0;
                         multOP = 1'b0;
-                        shiftOP = 3'b000;
                         shiftCtrl = 3'b000;
                         ALUOP = 3'b000;
 
@@ -2415,7 +2362,6 @@ module controlUnit(
                     else if (COUNTER == 5) begin
                         divOP = 1'b0;
                         multOP = 1'b0;
-                        shiftOP = 3'b000;
                         shiftCtrl = 3'b000;
                         ALUOP = 3'b000;
 
@@ -2460,7 +2406,6 @@ module controlUnit(
                     if (COUNTER <= 1) begin
                         divOP = 1'b0;
                         multOP = 1'b0;
-                        shiftOP = 3'b000;
                         shiftCtrl = 3'b000;
                         ALUOP = 3'b010; //
 
@@ -2502,7 +2447,6 @@ module controlUnit(
                     else if (COUNTER == 2) begin
                         divOP = 1'b0;
                         multOP = 1'b0;
-                        shiftOP = 3'b000;
                         shiftCtrl = 3'b000;
                         ALUOP = 3'b000;
 
@@ -2547,7 +2491,6 @@ module controlUnit(
                     if (COUNTER <= 1) begin
                         divOP = 1'b0;
                         multOP = 1'b0;
-                        shiftOP = 3'b000;
                         shiftCtrl = 3'b000;
                         ALUOP = 3'b010; //
 
@@ -2589,7 +2532,6 @@ module controlUnit(
                     if(COUNTER == 2) begin
                         divOP = 1'b0;
                         multOP = 1'b0;
-                        shiftOP = 3'b000;
                         shiftCtrl = 3'b000;
                         ALUOP = 3'b000;
 
@@ -2634,7 +2576,6 @@ module controlUnit(
                     if (COUNTER == 0) begin
                         divOP = 1'b0;
                         multOP = 1'b0;
-                        shiftOP = 3'b000;
                         shiftCtrl = 3'b000;
                         ALUOP = 3'b000; //
 
@@ -2676,7 +2617,6 @@ module controlUnit(
                     else if (COUNTER == 1 || COUNTER == 2) begin
                         divOP = 1'b0;
                         multOP = 1'b0;
-                        shiftOP = 3'b000;
                         shiftCtrl = 3'b000;
                         ALUOP = 3'b000;
 
@@ -2721,8 +2661,7 @@ module controlUnit(
                     if (COUNTER == 0) begin
                         divOP = 1'b0;
                         multOP = 1'b0;
-                        shiftOP = 3'b001; //
-                        shiftCtrl = 3'b000;
+                        shiftCtrl = 3'b001; //
                         ALUOP = 3'b000;
 
                         WriteData = 3'b000;
@@ -2763,8 +2702,7 @@ module controlUnit(
                     else if (COUNTER == 1) begin
                         divOP = 1'b0;
                         multOP = 1'b0;
-                        shiftOP = 3'b010; //
-                        shiftCtrl = 3'b000;
+                        shiftCtrl = 3'b010;
                         ALUOP = 3'b000;
 
                         WriteData = 3'b000;
@@ -2805,7 +2743,6 @@ module controlUnit(
                     else if(COUNTER == 2) begin
                         divOP = 1'b0;
                         multOP = 1'b0;
-                        shiftOP = 3'b000;
                         shiftCtrl = 3'b000;
                         ALUOP = 3'b000;
 
@@ -2850,7 +2787,6 @@ module controlUnit(
                 ST_J : begin
                     divOP = 1'b0;
                     multOP = 1'b0;
-                    shiftOP = 3'b000;
                     shiftCtrl = 3'b000;
                     ALUOP = 3'b000;
 
@@ -2894,7 +2830,6 @@ module controlUnit(
                     if(COUNTER == 0) begin
                         divOP = 1'b0;
                         multOP = 1'b0;
-                        shiftOP = 3'b000;
                         shiftCtrl = 3'b000;
                         ALUOP = 3'b000; //
 
@@ -2936,7 +2871,6 @@ module controlUnit(
                     else if (COUNTER == 1) begin
                         divOP = 1'b0;
                         multOP = 1'b0;
-                        shiftOP = 3'b000;
                         shiftCtrl = 3'b000;
                         ALUOP = 3'b000;
 

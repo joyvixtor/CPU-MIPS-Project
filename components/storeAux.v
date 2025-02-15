@@ -1,12 +1,26 @@
 module storeAux (
-    input wire [1:0] selector,
-    input wire [31:0] data_0, data_1,
-    output wire [31:0] data_out
+    input wire [1:0] controleSS,
+    input wire [31:0] MDR_out,
+    input wire [31:0] B_out,
+    output reg [31:0] ss_out
 );
 
-    assign data_out = (selector == 2'b00) ? data_0 :
-                      (selector == 2'b01) ? {data_1[31:16], data_0[15:0]} :
-                      (selector == 2'b10) ? {data_1[31:8], data_0[7:0]} :
-                      32'dx;
+
+    parameter primeiro_caso = 2'b00;
+    parameter segundo_caso = 2'b01;
+    parameter terceiro_caso = 2'b10;
+
+    always @(*)
+        begin
+            if(controleSS == primeiro_caso) begin
+                ss_out = b_out;
+            end
+            if(controleSS == segundo_caso) begin
+                ss_out = {MDR_out[31:8], B_out[7:0]};
+            end
+            if(controleSS == terceiro_caso) begin
+                ss_out = {MDR_out[31:16], B_out[15:0]};
+            end
+        end
 
 endmodule
