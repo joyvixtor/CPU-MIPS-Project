@@ -13,7 +13,7 @@ module storeAux (
     always @(*)
         begin
             if(controleSS == primeiro_caso) begin
-                ss_out = b_out;
+                ss_out = B_out;
             end
             if(controleSS == segundo_caso) begin
                 ss_out = {MDR_out[31:8], B_out[7:0]};
