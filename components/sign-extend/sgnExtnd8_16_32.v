@@ -1,4 +1,4 @@
-module sgnExtnd1_32(
+module sgnExtnd8_16_32(
     input wire selector,
     input wire [7:0] data_mdr,
     input wire [15:0] data_instruction,

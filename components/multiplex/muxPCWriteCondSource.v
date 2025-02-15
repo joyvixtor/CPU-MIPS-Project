@@ -1,4 +1,4 @@
-module muxShiftIn(
+module muxPCWriteCondSource(
     input wire selector,
     input wire data_0,
     output reg out
