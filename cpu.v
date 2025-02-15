@@ -133,7 +133,7 @@ module cpu(
 
     // COMPONENTES
     //ALU
-    ALU alu(
+    ula32 alu(
         //signals
         ALUOP,
         //inputs
@@ -162,7 +162,7 @@ module cpu(
     );
 
     // Instruction Register 
-    Instruc_Reg InstructionRegister(
+    Instr_Reg InstructionRegister(
         //signals
         clk,
         reset,
@@ -219,7 +219,7 @@ module cpu(
     );
 
     //Unidade de Shifting
-    ShiftingUnit shiftUnit(
+    RegDesloc shiftUnit(
         //signals
         clk,
         reset,
@@ -232,7 +232,7 @@ module cpu(
     );
 
     //MULTIPLEXADORES
-    mux_IorD muxIorD(
+    muxIorD muxIorD(
         //signals
         IorD,
         //inputs
@@ -244,7 +244,7 @@ module cpu(
         outMuxIorD
     );
 
-    mux_RegDst muxRegDst(
+    muxRegDst muxRegDst(
         //signals
         RegDst,
         //inputs
@@ -254,7 +254,7 @@ module cpu(
         outMuxRegDst
     );
 
-    mux_WriteData muxWriteData(
+    muxWriteData muxWriteData(
         //signals
         WriteData,
         //inputs
@@ -268,7 +268,7 @@ module cpu(
         outMuxWriteData
     );
 
-    mux_AuxMultDivA auxMuxMultDivA(
+    muxMultDiv auxMuxMultDivA(
         //signals
         MemA,
         //inputs
@@ -278,7 +278,7 @@ module cpu(
         outMuxAuxMultDivA
     );
 
-    mux_AuxMultDivB auxMuxMultDivB(
+    muxMultDiv auxMuxMultDivB(
         //signals
         MemB,
         //inputs
@@ -288,7 +288,7 @@ module cpu(
         outMuxAuxMultDivB
     );
 
-    mux_MultDivA muxMultDivA(
+    muxMultDiv muxMultDivA(
         //signals
         MultDiv,
         //inputs
@@ -298,7 +298,7 @@ module cpu(
         outMultDivA
     );
 
-    mux_MultDivB muxMultDivB(
+    muxMultDiv muxMultDivB(
         //signals
         MultDiv,
         //inputs
@@ -308,7 +308,7 @@ module cpu(
         outMultDivB
     );
 
-    mux_ShiftIn muxShiftIn(
+    muxShiftIn muxShiftIn(
         //signals
         ShiftIn,
         //inputs
@@ -318,7 +318,7 @@ module cpu(
         outMuxShiftIn
     );
 
-    mux_ShiftS muxShiftS(
+    muxShiftS muxShiftS(
         //signals
         ShiftS,
         //inputs
@@ -327,7 +327,7 @@ module cpu(
         outMuxShiftS
     );
 
-    mux_ALUA muxAluA(
+    muxALUSrcA muxAluA(
         //signals
         ALUSrcA,
         //inputs
@@ -337,7 +337,7 @@ module cpu(
         outMuxAluA
     );
 
-    mux_ALUB muxAluB(
+    muxALUSrcB muxAluB(
         //signals
         ALUSrcB,
         //inputs
@@ -348,7 +348,7 @@ module cpu(
         outMuxAluB
     );
 
-    mux_PCSource muxPCSrc(
+    muxPCSrc muxPCSrc(
         //signals
         PCSrc,
         //inputs
@@ -360,7 +360,7 @@ module cpu(
         outPCSrc
     );
 
-    mux_PC_Write_Cond_Source muxPCWCSrc(
+    muxPCWriteCondSource muxPCWCSrc(
         //signals
         PCWriteCondSource,
         //inputs
@@ -371,14 +371,14 @@ module cpu(
     );
 
     //UNIDADES DE SHIFT E SIGN EXTEND
-    Extend_1to32 ex_1to32(
+    sgnExtnd1_32 ex_1to32(
         //input
         outALULT,
         //output
         outEx1to32
     );
 
-    Extend_16to32_8to32 ex16to32_8to32(
+    sgnExtnd8_16_32 ex16to32_8to32(
         //signals
         SignExtndCtrl,
         //input
@@ -388,14 +388,14 @@ module cpu(
         outSignExtnd_8to32_16to32
     );
 
-    Shift_Left2 SL2(
+    shiftLeft2 SL2(
         //Input
         outSignExtnd_8to32_16to32,
         //Output
         outShiftLeft_2
     );
 
-    Shift_Left2_26to28 SL226to28(
+    shiftLeft26_28 SL226to28(
         //input
         instruction25_21,
         instruction20_16,
@@ -540,7 +540,7 @@ module cpu(
     );
 
     //UNIDADE DE CONTROLE
-    ControlUnit controlUnit(
+    controlUnit controlUnit(
         //inputs
         clk,
         reset,
