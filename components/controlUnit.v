@@ -3230,8 +3230,8 @@ module controlUnit(
                         ALUOP = 3'b000;
 
                         WriteData = 3'b000;
-                        muxShiftS = 2'b00;
-                        muxShiftIn = 2'b00;
+                        muxShiftS = 2'b01;
+                        muxShiftIn = 2'b01;
                         RegDst = 2'b00;
                         muxPCWriteCondSource = 1'b0;
                         PCSrc = 2'b00;
