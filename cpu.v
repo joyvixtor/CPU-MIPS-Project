@@ -279,7 +279,7 @@ module cpu(
         //signals
         MemA,
         //inputs
-        outDataA,
+        outA,
         outAuxMultDivA,
         //outputs
         outMuxAuxMultDivA
@@ -289,7 +289,7 @@ module cpu(
         //signals
         MemB,
         //inputs
-        outDataB,
+        outB,
         outAuxMultDivB,
         //outputs
         outMuxAuxMultDivB
@@ -319,7 +319,7 @@ module cpu(
         //signals
         ShiftIn,
         //inputs
-        outDataB,
+        outB,
         outSignExtnd_8to32_16to32,
         //outputs
         outMuxShiftIn
