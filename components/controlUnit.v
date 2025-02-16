@@ -2144,7 +2144,7 @@ module controlUnit(
                         SCtrl = 2'b00;
                         LCtrl = 2'b00;
 
-                        MemReadWrite = 1'b1; //
+                        MemReadWrite = 1'b0; //
                         IRWrite = 1'b0;
                         RegWrite = 1'b0;
 

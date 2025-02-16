@@ -408,6 +408,7 @@ module cpu(
     );
 
     //REGISTRADORES
+    //A SIGNAL TO PC THAT ALARMS IF THE CPU NEEDS TO JUMP, BRANCH ETC
     assign writePC = (PCWrite || (PCWriteCond && outMuxPCWriteCond)); 
 
     Registrador PC(
