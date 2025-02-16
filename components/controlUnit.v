@@ -483,7 +483,7 @@ module controlUnit(
                         shiftCtrl = 3'b000;
                         ALUOP = 3'b000;
 
-                        WriteData = 3'b010; //
+                        WriteData = 3'b000; //
                         muxShiftS = 1'b0;
                         muxShiftIn = 1'b0;
                         RegDst = 2'b01; //
@@ -515,7 +515,7 @@ module controlUnit(
 
                         MemReadWrite = 1'b0;
                         IRWrite = 1'b0;
-                        RegWrite = 1'b1;
+                        RegWrite = 1'b1; //
 
                         SignExtndCtrl = 1'b0;
                     end
@@ -568,7 +568,7 @@ module controlUnit(
                         divOP = 1'b0;
                         multOP = 1'b0;
                         shiftCtrl = 3'b000;
-                        ALUOP = 3'b001; //
+                        ALUOP = 3'b011; //
 
                         WriteData = 3'b000;
                         muxShiftS = 1'b0;
@@ -612,7 +612,7 @@ module controlUnit(
                         shiftCtrl = 3'b000;
                         ALUOP = 3'b000;
 
-                        WriteData = 3'b010; //
+                        WriteData = 3'b000; //
                         muxShiftS = 1'b0;
                         muxShiftIn = 1'b0;
                         RegDst = 2'b01; //
@@ -1318,7 +1318,7 @@ module controlUnit(
                         MemB = 1'b0;
 
                         COUNTER = COUNTER + 1;
-                        STATE = ST_SLL;
+                        STATE = ST_SRA;
 
                         PCWriteCond = 1'b0;
                         PCWrite = 1'b0;
@@ -1360,7 +1360,7 @@ module controlUnit(
                         MemB = 1'b0;
 
                         COUNTER = COUNTER + 1;
-                        STATE = ST_SLL;
+                        STATE = ST_SRA;
 
                         PCWriteCond = 1'b0;
                         PCWrite = 1'b0;
@@ -1474,7 +1474,7 @@ module controlUnit(
                         shiftCtrl = 3'b000;
                         ALUOP = 3'b000;
 
-                        WriteData = 3'b010; //
+                        WriteData = 3'b000; //
                         muxShiftS = 2'b00;
                         muxShiftIn = 2'b00;
                         RegDst = 2'b01; //
