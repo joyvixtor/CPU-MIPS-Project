@@ -124,7 +124,6 @@ module controlUnit(
     parameter JAL = 6'h03;
 
 
-
     always @(posedge clk) begin
         if (reset) begin
             //SINAIS OPERACOES
@@ -301,7 +300,7 @@ module controlUnit(
                         SCtrl = 2'b00;
                         LCtrl = 2'b00;
 
-                        MemReadWrite = 1'b0;
+                        MemReadWrite = 1'b1; //
                         IRWrite = 1'b1; //
                         RegWrite = 1'b0;
 
@@ -329,7 +328,7 @@ module controlUnit(
                         MemA = 1'b0;
                         MemB = 1'b0;
 
-                        COUNTER = 0;
+                        COUNTER = COUNTER + 1;
                         STATE = ST_COMMON;
 
                         PCWriteCond = 1'b0;
