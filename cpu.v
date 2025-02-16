@@ -341,6 +341,7 @@ module cpu(
         //inputs
         outPC,
         outA,
+        outAuxASrc,
         //output
         outMuxAluA
     );
@@ -455,7 +456,7 @@ module cpu(
         outMDR,
         //outputs
         outAuxASrc
-    )
+    );
 
     Registrador EPC(
         //signals
