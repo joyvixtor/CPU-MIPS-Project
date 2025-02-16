@@ -1397,7 +1397,7 @@ module controlUnit(
                         IorD = 2'b00;
                         ExCause = 2'b00;
                         ALUSrcA = 2'b00;
-                        ALUSrcB = 3'b900;
+                        ALUSrcB = 3'b000;
                         MemA = 1'b0;
                         MemB = 1'b0;
 
