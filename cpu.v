@@ -10,7 +10,7 @@ module cpu(
     wire MemB;
     wire MultDiv;
     wire [1:0] ALUSrcA;
-    wire [1:0] ALUSrcB;
+    wire [2:0] ALUSrcB;
     wire [1:0] PCSrc;
     wire [1:0] RegDst;
     wire [2:0] WriteData;
@@ -353,6 +353,7 @@ module cpu(
         outB,
         outSignExtnd_8to32_16to32,
         outShiftLeft_2,
+        outAuxASrc,
         //output
         outMuxAluB
     );
