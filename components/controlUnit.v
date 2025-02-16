@@ -322,7 +322,7 @@ module controlUnit(
                         WriteData = 3'b000;
                         muxShiftS = 1'b0;
                         muxShiftIn = 1'b0;
-                        RegDst = 2'b10;
+                        RegDst = 2'b00;
                         muxPCWriteCondSource = 1'b0;
                         PCSrc = 2'b00;
                         MultDiv = 1'b0;
@@ -2032,7 +2032,7 @@ module controlUnit(
                         WriteData = 3'b000; //
                         muxShiftS = 1'b0;
                         muxShiftIn = 1'b0;
-                        RegDst = 2'b01; //
+                        RegDst = 2'b00; //
                         muxPCWriteCondSource = 1'b0;
                         PCSrc = 2'b00;
                         MultDiv = 1'b0;
