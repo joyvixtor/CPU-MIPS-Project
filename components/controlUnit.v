@@ -300,7 +300,7 @@ module controlUnit(
                         SCtrl = 2'b00;
                         LCtrl = 2'b00;
 
-                        MemReadWrite = 1'b1; //
+                        MemReadWrite = 1'b0; //
                         IRWrite = 1'b1; //
                         RegWrite = 1'b0;
 
@@ -352,7 +352,7 @@ module controlUnit(
                     else if (COUNTER == 4) begin
                         case (opcode)
                             //TIPOS R
-                            R : begin SignExtndCtrl = 1'b0;
+                            R : begin
                                 case(funct)
                                     ADD : STATE = ST_ADD;
                                     AND : STATE = ST_AND;

@@ -416,7 +416,7 @@ module cpu(
         reset,
         writePC,
         //inputs
-        outMuxPCWrite,
+        outPCSrc,
         //outputs
         outPC
     );
