@@ -43,6 +43,7 @@ module controlUnit(
     output reg AuxMultDivB,
     output reg [1:0] SCtrl,
     output reg [1:0] LCtrl,
+    output reg ASrc,
 
     // COR VERDE NO DIAGRAMA
     output reg MemReadWrite,

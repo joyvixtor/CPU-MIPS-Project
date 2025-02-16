@@ -29,6 +29,7 @@ module cpu(
     wire HiLow;
     wire AuxMultDivA;
     wire AuxMultDivB;
+    wire ASrc;
 
     wire multOP;
     wire divOP;
@@ -130,6 +131,7 @@ module cpu(
     wire [27:0] outShiftLeft_2_26to28;
     wire outMuxPCWriteCondSource;
     wire [31:0] outPCSrc;
+    wire [31:0] outAuxASrc;
 
 
     // COMPONENTES
@@ -444,6 +446,17 @@ module cpu(
         outB
     );
 
+    Registrador AuxASrc(
+        //signals
+        clk,
+        reset,
+        ASrc,
+        //inputs
+        outMDR,
+        //outputs
+        outAuxASrc
+    )
+
     Registrador EPC(
         //signals
         clk,
@@ -584,6 +597,7 @@ module cpu(
         AuxMultDivB,
         SCtrl,
         LCtrl,
+        ASrc,
 
         //COR VERDE
         MemReadWrite,
