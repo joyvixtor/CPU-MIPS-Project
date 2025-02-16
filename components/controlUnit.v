@@ -2572,7 +2572,7 @@ module controlUnit(
                         LCtrl = 2'b00;
                         ASrc = 1'b0;
 
-                        MemReadWrite = 1'b1; // 
+                        MemReadWrite = 1'b0; // 
                         IRWrite = 1'b0;
                         RegWrite = 1'b0;
 

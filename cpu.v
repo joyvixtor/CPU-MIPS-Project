@@ -57,7 +57,6 @@ module cpu(
 
     // data wires
     wire [31:0] outMemory;
-    wire [31:0] outSCtrl;
     wire [31:0] outMuxIorD;
 
     wire [5:0] instruction31_26;
@@ -161,7 +160,7 @@ module cpu(
         clk,
         MemReadWrite,
         //inputs
-        outSCtrl,
+        outSAux,
         //outputs
         outMemory
     );

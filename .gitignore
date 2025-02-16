@@ -5,6 +5,7 @@ mipsproject.mpf
 mipsproject.cr.mti
 transcript
 mipscputeste.cr.mti
+instrucoes.mif
 /mips - alunos
 /Testes_projeto
 vsim.wlf
