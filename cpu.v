@@ -267,10 +267,10 @@ module cpu(
         //inputs
         outALUOut,
         outEx1to32,
-        outLAux,
         outHI,
         outLOW,
         outShiftingUnit,
+        outLAux,
         //outputs
         outMuxWriteData
     );
