@@ -9,7 +9,7 @@ module sgnExtnd8_16_32(
 
     assign out_instruction =  (data_instruction[15]) ? {{16{1'b1}}, data_instruction} : {{16{1'b0}}, data_instruction};
 
-    assign out_mdr = {24'b0, data_mdr};
+    assign out_mdr = {{24{1'b0}}, data_mdr};
 
     assign out = (selector == 1'b0) ? out_instruction : out_mdr;
 

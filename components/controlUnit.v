@@ -1996,7 +1996,7 @@ module controlUnit(
                         MultDiv = 1'b0;
                         IorD = 2'b00; 
                         ExCause = 2'b00;
-                        ALUSrcA = 2'b10; //
+                        ALUSrcA = 2'b01; //
                         ALUSrcB = 3'b010; //
                         MemA = 1'b0;
                         MemB = 1'b0;
@@ -2027,7 +2027,7 @@ module controlUnit(
                         divOP = 1'b0;
                         multOP = 1'b0;
                         shiftCtrl = 3'b000;
-                        ALUOP = 3'b000;
+                        ALUOP = 3'b001;
 
                         WriteData = 3'b000; //
                         muxShiftS = 1'b0;
@@ -2050,7 +2050,7 @@ module controlUnit(
                         PCWrite = 1'b0;
                         MDRCtrl = 1'b0;
                         LoadAB = 1'b0;
-                        ALUOut = 1'b0;
+                        ALUOut = 1'b1;
                         EPCWrite = 1'b0;
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
