@@ -25,7 +25,6 @@ module multUnit (
 
     always @(posedge clk) begin
         if (reset) begin
-            // Seta tudo para 0
             resultHigh = 0;
             resultLow = 0;
             working = 0;
@@ -35,14 +34,13 @@ module multUnit (
             product = 0;
         end
 
-        // Unidade acabou de receber o sinal pra começar a operação
+        // multOP == 1 -> starta multiplicacao
         if (multOP) begin
             working <= 1;
             counter <= 0;
 
             product <= 0;
             
-            // A operação é feita com o módulo dos operandos
             if (B[31] == 1) begin
                 aux_B <= (~B + 1'b1);
             end
@@ -63,10 +61,10 @@ module multUnit (
             signal_B <= B[31];
         end
 
-        // Operação acontecendo
+        // working == operacao em andamento
         else if (working) begin
             // Passaram-se os 34 ciclos e a multiplicação acabou
-            if (counter == 35) begin
+            if (counter == 34) begin
                 if (signal_A != signal_B) begin
                     product = (~product + 1'b1);
                 end
@@ -80,7 +78,6 @@ module multUnit (
 
             // Iteração da multiplicação
             else begin
-                // Ver capítulo do livro sobre multiplicação
                 if (aux_B[0] == 1) begin
                     product <= product + aux_A;
                 end

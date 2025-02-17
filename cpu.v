@@ -203,8 +203,8 @@ module cpu(
         reset,
         multOP,
         //inputs
-        outAuxMultDivA,
-        outAuxMultDivB,
+        outMuxAuxMultDivA,
+        outMuxAuxMultDivB,
         //outputs
         multHighHalf,
         multLowHalf
