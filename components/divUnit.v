@@ -25,9 +25,7 @@ module divUnit (
     reg [63:0] diff;
 
     always @(posedge clk) begin
-        // Unidade acabou de receber o sinal pra começar a operação
         if (reset || (divOP == 0 && working == 0)) begin
-            // Seta tudo para 0
             working = 0;
             counter = 0;
             signal_quotient = 0;
@@ -42,12 +40,10 @@ module divUnit (
         end
 
         else if (divOP) begin
-            // Divisão por zero
             if (B == 0) begin
                 divByZero <= 1;
             end
 
-            // Começa a divisão
             else begin
                 divByZero <= 0;
                 working <= 1;
@@ -83,10 +79,10 @@ module divUnit (
             end
         end
 
-        // Operação acontecendo
+        // working == operacao acontecendo
         else if (working) begin
-            // Passaram-se os 34 ciclos e a divisão acabou
-            if (counter == 35) begin
+            // 34 ciclos da divisao
+            if (counter == 33) begin
                 if (signal_quotient == 0) begin
                     quotient <= aux_quotient;
                 end
@@ -106,12 +102,10 @@ module divUnit (
                 working <= 0;
             end
 
-            // Iteração da divisão
             else begin
-                // Ver capítulo de divisão do livro
                 diff = aux_remainder - aux_divisor;
 
-                if ((diff[63]) == 0) begin // Resto >= 0
+                if ((diff[63]) == 0) begin
                     aux_remainder <= diff;
 
                     aux_quotient <= {aux_quotient[30:0], 1'b1};

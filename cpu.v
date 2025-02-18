@@ -217,8 +217,8 @@ module cpu(
         reset,
         divOP,
         //inputs
-        outAuxMultDivA,
-        outAuxMultDivB,
+        outMuxAuxMultDivA,
+        outMuxAuxMultDivB,
         //outputs
         divByZero,
         divQuotient,

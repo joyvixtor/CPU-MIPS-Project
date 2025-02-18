@@ -710,8 +710,8 @@ module controlUnit(
                         ExCause = 2'b00;
                         ALUSrcA = 2'b00;
                         ALUSrcB = 3'b000;
-                        MemA = 1'b1; //
-                        MemB = 1'b1; //
+                        MemA = 1'b0; //
+                        MemB = 1'b0; //
 
                         COUNTER = COUNTER + 1;
                         STATE = ST_DIV;
@@ -735,7 +735,7 @@ module controlUnit(
 
                         SignExtndCtrl = 1'b0;
                     end
-                    else if (COUNTER <= 34) begin
+                    else if (COUNTER <= 36) begin
                         divOP = 1'b0; //
                         multOP = 1'b0;
                         shiftCtrl = 3'b000;
@@ -777,7 +777,7 @@ module controlUnit(
 
                         SignExtndCtrl = 1'b0;
                     end
-                    else if (COUNTER == 35) begin
+                    else if (COUNTER == 37) begin
                         divOP = 1'b0;
                         multOP = 1'b0;
                         shiftCtrl = 3'b000;
