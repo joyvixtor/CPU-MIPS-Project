@@ -16,8 +16,8 @@ module divUnit (
 
     reg working;
     integer counter;
-    reg signal_quotient; // Se esse sinal for 1, deve-se inverter o sinal do quociente
-    reg signal_A; // O resto e o dividendo devem ter o mesmo sinal
+    reg signal_quotient; 
+    reg signal_A; 
 
     reg [31:0] aux_quotient;
     reg [63:0] aux_remainder;
@@ -82,7 +82,7 @@ module divUnit (
         // working == operacao acontecendo
         else if (working) begin
             // 34 ciclos da divisao
-            if (counter == 33) begin
+            if (counter == 34) begin
                 if (signal_quotient == 0) begin
                     quotient <= aux_quotient;
                 end
