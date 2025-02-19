@@ -25,7 +25,7 @@ module divUnit (
     reg [63:0] diff;
 
     always @(posedge clk) begin
-        if (reset || (divOP == 0 && working == 0)) begin
+        if (reset) begin
             working = 0;
             counter = 0;
             signal_quotient = 0;
@@ -82,7 +82,7 @@ module divUnit (
         // working == operacao acontecendo
         else if (working) begin
             // 34 ciclos da divisao
-            if (counter == 34) begin
+            if (counter == 33) begin
                 if (signal_quotient == 0) begin
                     quotient <= aux_quotient;
                 end
