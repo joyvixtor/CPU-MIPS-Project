@@ -1078,45 +1078,45 @@ module controlUnit(
 
                 ST_JR : begin
                     divOP = 1'b0;
-                        multOP = 1'b0;
-                        shiftCtrl = 3'b000;
-                        ALUOP = 3'b000; //
+                    multOP = 1'b0;
+                    shiftCtrl = 3'b000;
+                    ALUOP = 3'b000; //
 
-                        WriteData = 3'b000; 
-                        muxShiftS = 2'b00;
-                        muxShiftIn = 2'b00;
-                        RegDst = 2'b00;
-                        muxPCWriteCondSource = 1'b0;
-                        PCSrc = 2'b00; //
-                        MultDiv = 1'b0;
-                        IorD = 2'b00;
-                        ExCause = 2'b00;
-                        ALUSrcA = 2'b01; //
-                        ALUSrcB = 3'b000;
-                        MemA = 1'b0;
-                        MemB = 1'b0;
+                    WriteData = 3'b000; 
+                    muxShiftS = 2'b00;
+                    muxShiftIn = 2'b00;
+                    RegDst = 2'b00;
+                    muxPCWriteCondSource = 1'b0;
+                    PCSrc = 2'b00; //
+                    MultDiv = 1'b0;
+                    IorD = 2'b00;
+                    ExCause = 2'b00;
+                    ALUSrcA = 2'b01; //
+                    ALUSrcB = 3'b000;
+                    MemA = 1'b0;
+                    MemB = 1'b0;
 
-                        COUNTER = 0;
-                        STATE = ST_COMMON;
+                    COUNTER = 0;
+                    STATE = ST_COMMON;
 
-                        PCWriteCond = 1'b0;
-                        PCWrite = 1'b1; //
-                        MDRCtrl = 1'b0;
-                        LoadAB = 1'b0;
-                        ALUOut = 1'b0;
-                        EPCWrite = 1'b0;
-                        HiLow = 1'b0;
-                        AuxMultDivA = 1'b0;
-                        AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
-                        ASrc = 1'b0; //
+                    PCWriteCond = 1'b0;
+                    PCWrite = 1'b1; //
+                    MDRCtrl = 1'b0;
+                    LoadAB = 1'b0;
+                    ALUOut = 1'b0;
+                    EPCWrite = 1'b0;
+                    HiLow = 1'b0;
+                    AuxMultDivA = 1'b0;
+                    AuxMultDivB = 1'b0;
+                    SCtrl = 2'b00;
+                    LCtrl = 2'b00;
+                    ASrc = 1'b0; //
 
-                        MemReadWrite = 1'b0;
-                        IRWrite = 1'b0;
-                        RegWrite = 1'b0;
+                    MemReadWrite = 1'b0;
+                    IRWrite = 1'b0;
+                    RegWrite = 1'b0;
 
-                        SignExtndCtrl = 1'b0;
+                    SignExtndCtrl = 1'b0;
                 end
 
                 ST_MFHI : begin
@@ -3570,10 +3570,10 @@ module controlUnit(
                         shiftCtrl = 3'b000;
                         ALUOP = 3'b000;
 
-                        WriteData = 3'b000; 
+                        WriteData = 3'b000; //
                         muxShiftS = 2'b00;
                         muxShiftIn = 2'b00;
-                        RegDst = 2'b00;
+                        RegDst = 2'b11; //
                         muxPCWriteCondSource = 1'b0;
                         PCSrc = 2'b00;
                         MultDiv = 1'b0;
@@ -3602,7 +3602,7 @@ module controlUnit(
 
                         MemReadWrite = 1'b0;
                         IRWrite = 1'b0;
-                        RegWrite = 1'b0;
+                        RegWrite = 1'b1; //
 
                         SignExtndCtrl = 1'b0;
                     end
