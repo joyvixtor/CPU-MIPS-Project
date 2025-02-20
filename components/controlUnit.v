@@ -2707,7 +2707,7 @@ module controlUnit(
                 end
 
                 ST_LB : begin
-                    if (COUNTER == 0) begin
+                    if(COUNTER == 0) begin
                         divOP = 1'b0;
                         multOP = 1'b0;
                         shiftCtrl = 3'b000;
@@ -2720,7 +2720,7 @@ module controlUnit(
                         muxPCWriteCondSource = 1'b0;
                         PCSrc = 2'b00;
                         MultDiv = 1'b0;
-                        IorD = 2'b00;
+                        IorD = 2'b01; //
                         ExCause = 2'b00;
                         ALUSrcA = 2'b01; //
                         ALUSrcB = 3'b010; //
@@ -2747,9 +2747,9 @@ module controlUnit(
                         IRWrite = 1'b0;
                         RegWrite = 1'b0;
 
-                        SignExtndCtrl = 1'b0;
+                        SignExtndCtrl = 1'b0; //
                     end
-                    else if (COUNTER == 1 || COUNTER == 2) begin
+                    else if(COUNTER == 1 || COUNTER == 2) begin
                         divOP = 1'b0;
                         multOP = 1'b0;
                         shiftCtrl = 3'b000;
@@ -2762,7 +2762,7 @@ module controlUnit(
                         muxPCWriteCondSource = 1'b0;
                         PCSrc = 2'b00;
                         MultDiv = 1'b0;
-                        IorD = 2'b11; //
+                        IorD = 2'b01; //
                         ExCause = 2'b00;
                         ALUSrcA = 2'b00;
                         ALUSrcB = 3'b000;
@@ -2782,10 +2782,10 @@ module controlUnit(
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
                         SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        LCtrl = 2'b10; //
                         ASrc = 1'b0;
 
-                        MemReadWrite = 1'b0;
+                        MemReadWrite = 1'b0; //
                         IRWrite = 1'b0;
                         RegWrite = 1'b0;
 
@@ -2804,14 +2804,14 @@ module controlUnit(
                         muxPCWriteCondSource = 1'b0;
                         PCSrc = 2'b00;
                         MultDiv = 1'b0;
-                        IorD = 2'b11; //
+                        IorD = 2'b01; //
                         ExCause = 2'b00;
                         ALUSrcA = 2'b00;
                         ALUSrcB = 3'b000;
                         MemA = 1'b0;
                         MemB = 1'b0;
 
-                        COUNTER = COUNTER + 1;
+                        COUNTER = COUNTER + 1; //
                         STATE = ST_LB;
 
                         PCWriteCond = 1'b0;
@@ -2832,8 +2832,8 @@ module controlUnit(
                         RegWrite = 1'b1; //
 
                         SignExtndCtrl = 1'b0;
-                    end
-                    else if (COUNTER == 5) begin
+                    end 
+                    else if (COUNTER == 5)begin
                         divOP = 1'b0;
                         multOP = 1'b0;
                         shiftCtrl = 3'b000;
