@@ -244,8 +244,8 @@ module cpu(
         //inputs
         outPC,
         outALUOut,
-        outALUResult,
         outMuxExCause,
+        outALUResult,
         //outputs
         outMuxIorD
     );
