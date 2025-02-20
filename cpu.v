@@ -95,7 +95,6 @@ module cpu(
 
     wire [31:0] outPC;
     wire [31:0] outMuxPCWrite;
-    wire [31:0] outMuxPCWriteCond;
 
     wire [31:0] outMuxExCause;
 
@@ -412,7 +411,7 @@ module cpu(
 
     //REGISTRADORES
     //A SIGNAL TO PC THAT ALARMS IF THE CPU NEEDS TO JUMP, BRANCH ETC
-    assign writePC = (PCWrite || (PCWriteCond && outMuxPCWriteCond)); 
+    assign writePC = (PCWrite || (PCWriteCond && outMuxPCWriteCondSource)); 
 
     Registrador PC(
         //signals

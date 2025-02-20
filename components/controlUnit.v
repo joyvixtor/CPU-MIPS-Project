@@ -3031,7 +3031,7 @@ module controlUnit(
                         STATE = ST_BNE;
 
                         PCWriteCond = 1'b1; //
-                        PCWrite = 1'b0;
+                        PCWrite = 1'b0; 
                         MDRCtrl = 1'b0;
                         LoadAB = 1'b0;
                         ALUOut = 1'b0;
