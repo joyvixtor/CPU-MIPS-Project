@@ -20,9 +20,9 @@ module cpu(
     // register signals
     wire PCWriteCond;
     wire PCWrite;
-    wire [1:0] SCtrl;
+    wire SCtrl;
     wire MDRCtrl;
-    wire [1:0] LCtrl;
+    wire LCtrl;
     wire LoadAB;
     wire ALUOut;
     wire EPCWrite;

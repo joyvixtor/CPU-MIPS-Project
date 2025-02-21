@@ -41,8 +41,8 @@ module controlUnit(
     output reg HiLow,
     output reg AuxMultDivA,
     output reg AuxMultDivB,
-    output reg [1:0] SCtrl,
-    output reg [1:0] LCtrl,
+    output reg SCtrl,
+    output reg LCtrl,
     output reg ASrc,
 
     // COR VERDE NO DIAGRAMA
@@ -161,8 +161,8 @@ module controlUnit(
             HiLow = 1'b0;
             AuxMultDivA = 1'b0;
             AuxMultDivB = 1'b0;
-            SCtrl = 2'b00;
-            LCtrl = 2'b00;
+            SCtrl = 1'b0;
+            LCtrl = 1'b0;
             ASrc = 1'b0;
 
             //REGISTRADORES GRANDES (VERDES)
@@ -205,8 +205,8 @@ module controlUnit(
             HiLow = 1'b0;
             AuxMultDivA = 1'b0;
             AuxMultDivB = 1'b0;
-            SCtrl = 2'b00;
-            LCtrl = 2'b00;
+            SCtrl = 1'b0;
+            LCtrl = 1'b0;
             ASrc = 1'b0;
 
             MemReadWrite = 1'b0;
@@ -248,8 +248,8 @@ module controlUnit(
             HiLow = 1'b0;
             AuxMultDivA = 1'b0;
             AuxMultDivB = 1'b0;
-            SCtrl = 2'b00;
-            LCtrl = 2'b00;
+            SCtrl = 1'b0;
+            LCtrl = 1'b0;
             ASrc = 1'b0;
 
             MemReadWrite = 1'b0;
@@ -301,8 +301,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0; //
@@ -344,8 +344,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0;
@@ -421,8 +421,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0;
@@ -467,8 +467,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0;
@@ -509,8 +509,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0;
@@ -551,8 +551,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0;
@@ -596,8 +596,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0;
@@ -638,8 +638,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0;
@@ -680,8 +680,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0;
@@ -725,8 +725,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0;
@@ -767,8 +767,8 @@ module controlUnit(
                         HiLow = 1'b1; //
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0;
@@ -809,8 +809,8 @@ module controlUnit(
                         HiLow = 1'b1;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0;
@@ -851,8 +851,8 @@ module controlUnit(
                         HiLow = 1'b0; //
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0;
@@ -896,8 +896,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0;
@@ -938,8 +938,8 @@ module controlUnit(
                         HiLow = 1'b1; //
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0;
@@ -980,8 +980,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0;
@@ -1022,8 +1022,8 @@ module controlUnit(
                         HiLow = 1'b1; //LIGA DE NOVO
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0;
@@ -1064,8 +1064,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0;
@@ -1108,8 +1108,8 @@ module controlUnit(
                     HiLow = 1'b0;
                     AuxMultDivA = 1'b0;
                     AuxMultDivB = 1'b0;
-                    SCtrl = 2'b00;
-                    LCtrl = 2'b00;
+                    SCtrl = 1'b0;
+                    LCtrl = 1'b0;
                     ASrc = 1'b0; //
 
                     MemReadWrite = 1'b0;
@@ -1152,8 +1152,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0;
@@ -1194,8 +1194,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0;
@@ -1239,8 +1239,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0;
@@ -1281,8 +1281,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0;
@@ -1326,8 +1326,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0;
@@ -1368,8 +1368,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0;
@@ -1410,8 +1410,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0;
@@ -1455,8 +1455,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0;
@@ -1497,8 +1497,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0;
@@ -1539,8 +1539,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0;
@@ -1584,8 +1584,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0;
@@ -1626,8 +1626,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0;
@@ -1668,8 +1668,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0;
@@ -1713,8 +1713,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0;
@@ -1755,8 +1755,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0; //
@@ -1797,8 +1797,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b1; //
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0; //
@@ -1839,8 +1839,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0; //
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0;
@@ -1881,8 +1881,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0; //
@@ -1923,8 +1923,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b1; //
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0; //
@@ -1965,8 +1965,8 @@ module controlUnit(
                         HiLow = 1'b1; //
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0; //
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0;
@@ -2007,8 +2007,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0;
@@ -2052,8 +2052,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0;
@@ -2094,8 +2094,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0;
@@ -2139,8 +2139,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0;
@@ -2181,8 +2181,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0;
@@ -2223,8 +2223,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0;
@@ -2268,8 +2268,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0;
@@ -2310,8 +2310,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0; //
@@ -2352,8 +2352,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00; //
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0; //
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0;
@@ -2394,8 +2394,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0;
@@ -2439,8 +2439,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0;
@@ -2481,8 +2481,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b01; //
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b1; //
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0; //
@@ -2523,8 +2523,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b01; //
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b1; //
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b1; //
@@ -2565,8 +2565,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0;
@@ -2610,8 +2610,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0;
@@ -2652,8 +2652,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00; //
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0; //
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b1; //
@@ -2694,8 +2694,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0;
@@ -2739,8 +2739,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0;
@@ -2781,8 +2781,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b10; //
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b1; //
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0; //
@@ -2823,8 +2823,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b10; //
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b1; //
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0;
@@ -2865,8 +2865,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0;
@@ -2910,8 +2910,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0;
@@ -2952,8 +2952,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0;
@@ -2997,8 +2997,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0;
@@ -3039,8 +3039,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0;
@@ -3084,8 +3084,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0;
@@ -3126,8 +3126,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b10; //
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b1; //
                         ASrc = 1'b1; //
 
                         MemReadWrite = 1'b0; //
@@ -3168,8 +3168,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b01; //
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b1; //
+                        LCtrl = 1'b0;
                         ASrc = 1'b0; 
 
                         MemReadWrite = 1'b1; //
@@ -3210,8 +3210,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0;
@@ -3252,8 +3252,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0;
@@ -3297,8 +3297,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0;
@@ -3339,8 +3339,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0;
@@ -3381,8 +3381,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0;
@@ -3423,8 +3423,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0;
@@ -3468,8 +3468,8 @@ module controlUnit(
                     HiLow = 1'b0;
                     AuxMultDivA = 1'b0;
                     AuxMultDivB = 1'b0;
-                    SCtrl = 2'b00;
-                    LCtrl = 2'b00;
+                    SCtrl = 1'b0;
+                    LCtrl = 1'b0;
                     ASrc = 1'b0;
 
                     MemReadWrite = 1'b0;
@@ -3512,8 +3512,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0;
@@ -3554,8 +3554,8 @@ module controlUnit(
                         HiLow = 1'b0;
                         AuxMultDivA = 1'b0;
                         AuxMultDivB = 1'b0;
-                        SCtrl = 2'b00;
-                        LCtrl = 2'b00;
+                        SCtrl = 1'b0;
+                        LCtrl = 1'b0;
                         ASrc = 1'b0;
 
                         MemReadWrite = 1'b0;
